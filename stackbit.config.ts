@@ -22,7 +22,7 @@ export default defineStackbitConfig({
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
-      contentDirs: ["src/content/blog"],
+      contentDirs: ["src/content/blog", "src/content/branch"],
       models: [{  
         name: "post",
         type: "page",
@@ -34,6 +34,17 @@ export default defineStackbitConfig({
           { name: "updatedDate", type: "date" },
           { name: "description", type: "string" },
           { name: "heroImage", type: "string" },
+        ],
+      },
+      {  
+        name: "branch",
+        type: "page",
+        urlPath: "/branch/{slug}",
+        filePath: "src/content/branch/{slug}.md",
+        fields: [
+          { name: "branchName", type: "string", required: true, default: "Branch Name" },
+          { name: "pubDate", type: "date", required: true },
+          { name: "updatedDate", type: "date" }
         ],
       }],
       assetsConfig: {

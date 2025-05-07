@@ -15,4 +15,13 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const branch = defineCollection({
+	loader: glob({ base: './src/content/branch', pattern: '**/*.{md,mdx}' }),
+	schema: z.object({
+		branchName: z.string(),
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
+	}),
+});
+
+export const collections = { blog, branch };

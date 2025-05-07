@@ -1,0 +1,21 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Branch from '../../layouts/Branch.astro';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('branch');
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'branch'>;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<Branch {...post.data} filePath={post.filePath}>
+	<Content />
+</Branch>
