@@ -1,0 +1,170 @@
+id="buddyboss_theme-style":root
+{
+    --bb-primary-color: #CB333B;
+    --bb-primary-color-rgb: 203, 51, 59;
+    --bb-body-background-color: #FAFBFD;
+    --bb-body-background-color-rgb: 250, 251, 253;
+    --bb-content-background-color: #FFFFFF;
+    --bb-content-alternate-background-color: #FBFBFC;
+    --bb-content-border-color: #E7E9EC;
+    --bb-content-border-color-rgb: 231, 233, 236;
+    --bb-cover-image-background-color: #607387;
+    --bb-headings-color: #122B46;
+    --bb-headings-color-rgb: 18, 43, 70;
+    --bb-body-text-color: #4D5C6D;
+    --bb-body-text-color-rgb: 77, 92, 109;
+    --bb-alternate-text-color: #A3A5A9;
+    --bb-alternate-text-color-rgb: 163, 165, 169;
+    --bb-primary-button-background-regular: #CB333B;
+    --bb-primary-button-background-hover: #CC5B5F;
+    --bb-primary-button-border-regular: #CB333B;
+    --bb-primary-button-border-hover: #CC6C6F;
+    --bb-primary-button-text-regular: #FFFFFF;
+    --bb-primary-button-text-regular-rgb: 255, 255, 255;
+    --bb-primary-button-text-hover: #FFFFFF;
+    --bb-primary-button-text-hover-rgb: 255, 255, 255;
+    --bb-secondary-button-background-regular: #F2F4F5;
+    --bb-secondary-button-background-hover: #CB333B;
+    --bb-secondary-button-border-regular: #F2F4F5;
+    --bb-secondary-button-border-hover: #CB333B;
+    --bb-secondary-button-text-regular: #1E2132;
+    --bb-secondary-button-text-hover: #FFFFFF;
+    --bb-header-background: #FFFFFF;
+    --bb-header-alternate-background: #F2F4F5;
+    --bb-header-links: #939597;
+    --bb-header-links-hover: #CB333B;
+    --bb-header-mobile-logo-size: 50px;
+    --bb-header-height: 70px;
+    --bb-sidenav-background: #FFFFFF;
+    --bb-sidenav-text-regular: #939597;
+    --bb-sidenav-text-hover: #939597;
+    --bb-sidenav-text-active: #FFFFFF;
+    --bb-sidenav-menu-background-color-regular: #FFFFFF;
+    --bb-sidenav-menu-background-color-hover: #F2F4F5;
+    --bb-sidenav-menu-background-color-active: #CB333B;
+    --bb-sidenav-count-text-color-regular: #939597;
+    --bb-sidenav-count-text-color-hover: #FFFFFF;
+    --bb-sidenav-count-text-color-active: #CB333B;
+    --bb-sidenav-count-background-color-regular: #F2F4F5;
+    --bb-sidenav-count-background-color-hover: #CB333B;
+    --bb-sidenav-count-background-color-active: #FFFFFF;
+    --bb-footer-background: #FFFFFF;
+    --bb-footer-widget-background: #FFFFFF;
+    --bb-footer-text-color: #5A5A5A;
+    --bb-footer-menu-link-color-regular: #5A5A5A;
+    --bb-footer-menu-link-color-hover: #CB333B;
+    --bb-footer-menu-link-color-active: #1E2132;
+    --bb-admin-screen-bgr-color: #FAFBFD;
+    --bb-admin-screen-txt-color: #122B46;
+    --bb-login-register-link-color-regular: #5A5A5A;
+    --bb-login-register-link-color-hover: #CB333B;
+    --bb-login-register-button-background-color-regular: #CB333B;
+    --bb-login-register-button-background-color-hover: #CC686B;
+    --bb-login-register-button-border-color-regular: #CB333B;
+    --bb-login-register-button-border-color-hover: #CC6C6F;
+    --bb-login-register-button-text-color-regular: #FFFFFF;
+    --bb-login-register-button-text-color-hover: #FFFFFF;
+    --bb-label-background-color: #D7DFFF;
+    --bb-label-text-color: #CB333B;
+    --bb-tooltip-background: #122B46;
+    --bb-tooltip-background-rgb: 18, 43, 70;
+    --bb-tooltip-color: #FFFFFF;
+    --bb-default-notice-color: #CB333B;
+    --bb-default-notice-color-rgb: 203, 51, 59;
+    --bb-success-color: #1CD991;
+    --bb-success-color-rgb: 28, 217, 145;
+    --bb-warning-color: #F7BA45;
+    --bb-warning-color-rgb: 247, 186, 69;
+    --bb-danger-color: #EF3E46;
+    --bb-danger-color-rgb: 239, 62, 70;
+    --bb-login-custom-heading-color: #FFFFFF;
+    --bb-button-radius: 100px;
+    --bb-block-radius: 10px;
+    --bb-option-radius: 5px;
+    --bb-block-radius-inner: 6px;
+    --bb-input-radius: 6px;
+    --bb-label-type-radius: 6px;
+    --bb-checkbox-radius: 5.4px;
+    --bb-primary-button-focus-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 0 0 2px rgba(0, 0, 0, 0.08);
+    --bb-secondary-button-focus-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 0 0 2px rgba(0, 0, 0, 0.08);
+    --bb-outline-button-focus-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 0 0 2px rgba(0, 0, 0, 0.08);
+    --bb-input-focus-shadow: 0 0 0 2px rgba(var(--bb-primary-color-rgb), 0.1);
+    --bb-input-focus-border-color: var(--bb-primary-color);
+    --bb-widget-title-text-transform: none;
+}
+.bb-style-primary-bgr-color {
+    background-color: #CB333B;
+}
+.bb-style-border-radius {
+    border-radius: 100px;
+}
+#site-logo .site-title img {
+    max-height: inherit;
+}
+.site-header-container .site-branding {
+    min-width: 100px;
+}
+#site-logo .site-title .bb-logo img,
+#site-logo .site-title img.bb-logo,
+.buddypanel .site-title img {
+    width: 100px;
+}
+.site-title img.bb-mobile-logo {
+    width: 50px;
+}
+.site-header-container #site-logo .bb-logo img,
+.site-header-container #site-logo .site-title img.bb-logo,
+.site-title img.bb-mobile-logo {
+    max-height: 70px
+}
+.sticky-header .site-content,
+body.buddypress.sticky-header .site-content,
+.bb-buddypanel.sticky-header .site-content,
+.single-sfwd-quiz.bb-buddypanel.sticky-header .site-content,
+.single-sfwd-lessons.bb-buddypanel.sticky-header .site-content,
+.single-sfwd-topic.bb-buddypanel.sticky-header .site-content {
+    padding-top: 70px
+}
+.site-header .site-header-container,
+.header-search-wrap,
+.header-search-wrap input.search-field,
+.header-search-wrap form.search-form {
+    height: 70px;
+}
+.sticky-header .bp-feedback.bp-sitewide-notice {
+    top: 70px;
+}
+@media screen and(max-width:767px) {
+    .bb-mobile-header {
+        height: 70px;
+    }
+    #learndash-content .lms-topic-sidebar-wrapper .lms-topic-sidebar-data {
+        height: calc(90vh - 70px);
+    }
+}
+[data-balloon]:after,
+[data-bp-tooltip]:after {
+    background-color: rgba(18, 43, 70, 1);
+    box-shadow: none;
+}
+[data-balloon]:before,
+[data-bp-tooltip]:before {
+    background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org / 2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(18,43,70,1)%22%20transform%3D%22rotate(0)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
+    background-size: 100% auto;
+}
+[data-bp-tooltip][data-bp-tooltip-pos="right"]:before,
+[data-balloon][data-balloon-pos='right']:before {
+    background: no-repeat url("data:image/svg+xml;charset=utf-8, %3Csvg%20xmlns%3D%22http://www.w3.org / 2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(18, 43, 70, 1)%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658, 0.000%20C-13.615, 0.000%2050.938, 0.000%2034.662, 0.000%20C28.662, 0.000%2023.035, 12.002%2018.660, 12.002%20C14.285, 12.002%208.594, 0.000%202.658, 0.000%20Z%22/%3E%3C/svg%3E");
+    background-size: 100% auto;
+}
+[data-bp-tooltip][data-bp-tooltip-pos="left"]:before,
+[data-balloon][data-balloon-pos='left']:before {
+    background: no-repeat url("data:image/svg+xml;charset=utf-8, %3Csvg%20xmlns%3D%22http://www.w3.org / 2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(18, 43, 70, 1)%22%20transform%3D%22rotate(-90 18 18)%22%20d%3D%22M2.658, 0.000%20C-13.615, 0.000%2050.938, 0.000%2034.662, 0.000%20C28.662, 0.000%2023.035, 12.002%2018.660, 12.002%20C14.285, 12.002%208.594, 0.000%202.658, 0.000%20Z%22/%3E%3C/svg%3E");
+    background-size: 100% auto;
+}
+[data-bp-tooltip][data-bp-tooltip-pos="down-left"]:before,
+[data-bp-tooltip][data-bp-tooltip-pos="down"]:before,
+[data-balloon][data-balloon-pos='down']:before {
+    background: no-repeat url("data:image/svg+xml;charset=utf-8, %3Csvg%20xmlns%3D%22http://www.w3.org / 2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(18, 43, 70, 1)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658, 0.000%20C-13.615, 0.000%2050.938, 0.000%2034.662, 0.000%20C28.662, 0.000%2023.035, 12.002%2018.660, 12.002%20C14.285, 12.002%208.594, 0.000%202.658, 0.000%20Z%22/%3E%3C/svg%3E");
+    background-size: 100% auto;
+}
