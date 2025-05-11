@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 type Props = CollectionEntry<'branch'>['data'] & {
 filePath: CollectionEntry<'branch'>['filePath']
@@ -12,83 +13,1299 @@ filePath: CollectionEntry<'branch'>['filePath']
 const { filePath, branchName, pubDate, updatedDate } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<BaseHead title={branchName} description={branchName} />
-		<style>
-			body {
-				text-align: left;
-			}
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-			article {
-				margin-top: 2em;
-			}
-		</style>
-	</head>
+<!-- This page is cached by the Hummingbird Performance plugin v3.13.1 - https://wordpress.org/plugins/hummingbird-performance/. -->
+<!doctype html>
+<html lang="en-US">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
-	<body>
-		<Header />
-		<main>
-			<article data-sb-object-id={filePath}>
-				<div class="hero-image">
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} data-sb-field-path="pubDate" />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} data-sb-field-path="updatedDate" />
-									</div>
-								)
-							}
-						</div>
-						<h1 data-sb-field-path="title">{branchName}</h1>
-						<hr />
-					</div>
-					<div data-sb-field-path="markdown_content">
-						<slot />
-					</div>
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+    <body
+        class="home page-template page-template-page-fullscreen page-template-page-fullscreen-php page page-id-117 buddyboss-theme bb-template-v2 bb-custom-typo  header-style-1  menu-style-standard sticky-header elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-117">
+
+        <!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKKXG7B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+
+
+        <div id="page" class="site">
+
+            <Header />
+
+
+            <div id="content" class="site-content">
+
+
+                <div class="container">
+                    <div class="bb-grid site-content-grid">
+                        <div data-elementor-type="wp-page" data-elementor-id="8621" class="elementor elementor-8621" data-elementor-post-type="page">
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-7a501284 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7a501284" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/1Icnfwkp0-o&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+                                <div class="elementor-background-video-container">
+                                    <div class="elementor-background-video-embed"></div>
+                                </div>
+                                <div class="elementor-background-overlay"></div>
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-705eae37" data-id="705eae37" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-6c57e6a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6c57e6a5" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-2c1a4f39" data-id="2c1a4f39" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-59216cab elementor-widget elementor-widget-heading" data-id="59216cab" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h1 class="elementor-heading-title elementor-size-default">Award-winning dog walking, pet sitting and home boarding in Reading
+                                                                    </h1>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-14fbbc4c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="14fbbc4c" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-1f7a28f7" data-id="1f7a28f7" data-element_type="column">
+                                                        <div class="elementor-widget-wrap"></div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-20225d1d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="20225d1d" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4a97782" data-id="4a97782" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-2cb15348 elementor-widget elementor-widget-button" data-id="2cb15348" data-element_type="widget" data-widget_type="button.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-button-wrapper">
+                                                                        <a class="elementor-button elementor-button-link elementor-size-lg" href="../index.html%3Fp=8621.html#contact">
+                                                                            <span class="elementor-button-content-wrapper">
+                                                                                <span class="elementor-button-text">Get in touch</span>
+                                                                            </span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-686a612e elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="686a612e" data-element_type="section" id="about" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-384369c0" data-id="384369c0" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-70326d31 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="70326d31" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7052eff1" data-id="7052eff1" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-7e623467 elementor-widget elementor-widget-text-editor" data-id="7e623467" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
+                                                                        <h4>
+                                                                            <strong>We Love Pets Reading &#8211;
+                                                                            </strong>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-65815ded elementor-widget elementor-widget-heading" data-id="65815ded" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">Dog walker, pet sitter and dog boarder all in one</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-6f274e13 elementor-widget elementor-widget-text-editor" data-id="6f274e13" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
+                                                                        <p>Our wonderful
+                                                                            <strong>We Love Pets Reading</strong>
+                                                                            branch offer friendly and reliable dog walking, dog sitting, cat sitting and other pet care services in Reading, Arborfield, Shinfield and the surrounding areas. The whole team are fully insured, DBS checked and pet first aid trained, so you know your pet will be safe and happy with us.</p>
+                                                                        <p>We Love Pets Reading all love animals, and genuinely enjoy getting to know your pet to a personal level, so we can create the perfect care plan for your pet’s individual needs. We get to know all pets as thoroughly as we would our own, so they remain happy and comfortable in our presence.</p>
+                                                                        <p>We’ll make sure to talk you through the range of services we offer before deciding on the best fit for you and your pet. We also make sure the team take lots of pictures throughout your pet’s time with us, so you can see how much fun they&#8217;re having while you&#8217;re not with them.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-f7faccb elementor-widget elementor-widget-button" data-id="f7faccb" data-element_type="widget" data-widget_type="button.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-button-wrapper">
+                                                                        <a class="elementor-button elementor-button-link elementor-size-lg" href="tel:07702093075">
+                                                                            <span class="elementor-button-content-wrapper">
+                                                                                <span class="elementor-button-icon">
+                                                                                    <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                                                                                </span>
+                                                                                <span class="elementor-button-text">Give us a call</span>
+                                                                            </span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-62006572" data-id="62006572" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-5b09fb79 elementor-widget elementor-widget-image" data-id="5b09fb79" data-element_type="widget" data-widget_type="image.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <img decoding="async" width="2560" height="1663" src="../wp-content/uploads/2023/02/1-3-min-scaled.jpg" class="attachment-full size-full wp-image-90499" alt="" srcset="../wp-content/uploads/2023/02/1-3-min-scaled.jpg 2560w, ../wp-content/uploads/2023/02/1-3-min-300x195.jpg 300w, ../wp-content/uploads/2023/02/1-3-min-1024x665.jpg 1024w, ../wp-content/uploads/2023/02/1-3-min-768x499.jpg 768w, ../wp-content/uploads/2023/02/1-3-min-1536x998.jpg 1536w, ../wp-content/uploads/2023/02/1-3-min-2048x1331.jpg 2048w, ../wp-content/uploads/2023/02/1-3-min-624x405.jpg 624w" sizes="(max-width: 2560px) 100vw, 2560px"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-2e03eb09 elementor-widget elementor-widget-text-editor" data-id="2e03eb09" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
+                                                                        <h3>
+                                                                            <strong>Meet Tracey | We Love Pets Reading</strong>
+                                                                        </h3>
+                                                                        <p>
+                                                                            <span style="color: #cb333b;">
+                                                                                <strong>
+                                                                                    <a href="tel:07702093075">07702 093075</a>
+                                                                                    |
+                                                                                    <a href="mailto:info@welovepets.care">info@welovepets.care</a>
+                                                                                </strong>
+                                                                            </span>
+                                                                        </p>
+                                                                        <p>Tracey is the Director of We Love Pets Reading and has been for many years. Tracey grew up with animals and loves working with them now. With over five years spent working with dogs, cats and small animals, you can trust her and her loyal team to care for your pet just as you would.</p>
+                                                                        <p>Tracey and the team are all police checked and fully insured. There is also a vet nurse on the team, providing you with extra peace of mind when you leave your pet in our care. Our team knows all the best walks in Reading, and will always make sure your pets will be happy and comfortably sleepy by the end of the day with us.</p>
+                                                                        <p>We truly love spending time with animals and want them to feel the same about being with us! We make sure that in the home your pet gets the perfect amount of attention, opportunities to go outside, and fresh water, and when they’re outside we play with them lots to make sure they get plenty of exercise, stimulation and the choice to explore and play.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-7ccf885 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7ccf885" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0038a4a" data-id="0038a4a" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-64dfb44 elementor-cta--talign-left elementor-cta--meadia-align-right elementor-widget elementor-widget-global elementor-global-300229 elementor-widget-bb-tabs" data-id="64dfb44" data-element_type="widget" data-widget_type="bb-tabs.default">
+                                                <div class="elementor-widget-container">
+
+                                                    <div class="bb-tabs">
+
+                                                        <div dir="ltr" class="tabs-wrapper flex tabs-wrapper--style1 bb-not-dotted">
+
+                                                            <div class="bb-tabs__nav flex bb-tabs__active-underline" data-num="8">
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">1</span>
+                                                                    <span class="bb-tabs__nav-title">Dog Walking</span>
+                                                                </div>
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">2</span>
+                                                                    <span class="bb-tabs__nav-title">Pop-in Pet Sitting</span>
+                                                                </div>
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">3</span>
+                                                                    <span class="bb-tabs__nav-title">Dog Sitting</span>
+                                                                </div>
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">4</span>
+                                                                    <span class="bb-tabs__nav-title">Dog Boarding</span>
+                                                                </div>
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">5</span>
+                                                                    <span class="bb-tabs__nav-title">Doggy Daycare</span>
+                                                                </div>
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">6</span>
+                                                                    <span class="bb-tabs__nav-title">House Sitting</span>
+                                                                </div>
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">7</span>
+                                                                    <span class="bb-tabs__nav-title">Cat Sitting</span>
+                                                                </div>
+                                                                <div class="bb-tabs__nav-item">
+                                                                    <span class="bb-tabs__nav-index">8</span>
+                                                                    <span class="bb-tabs__nav-title">Puppy Care</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="bb-tabs__run" data-nav="false" data-dots="false">
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>Dog Walking</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>Dog Walking</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>Fun, play, and exercise are the focus of our dog walks.</p>
+                                                                                <p>Our dog walkers aim to make each walk the highlight of your dog’s day, giving them a chance to play, socialise, exercise, and explore new sights and smells, returning them home happy and tired.</p>
+                                                                                <p>Your dog’s safety is always our top priority which is why we never pack walk dogs. We want your dog to experience a fun-filled walk whilst under constant supervision, without being bombarded by lots of other dogs. Instead, our trained and trusted dog walkers will walk your dog with two doggie friends for maximum play and socialisation.</p>
+                                                                                <p>We also offer socialisation dog walks and a one-to-one dog walking service, if you have a dog who needs some alone time with their walker or wants some TLC whilst discovering the big wide world.</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2021/11/A05I9105-min-1024x683.jpg" alt="Dog Walking"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>Pop-in Pet Sitting</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>Pop-in Pet Sitting</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>
+                                                                                    <span data-contrast="none">Our pet sitting services allow you to get away, happy with the knowledge that your pets will be well looked after - comfortable in their own home. Our pet sitter will spend time with your pets, make a fuss, feed, provide fresh water as required, and clear up any mess.</span>
+                                                                                    <span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true}"></span>
+                                                                                </p>
+                                                                                <p>
+                                                                                    <span data-contrast="none">Each of our pet sitters is professionally trained, vetted by us, fully insured and background checked. They also have up to date pet first aid training, for extra peace of mind.</span>
+                                                                                    <span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true}"></span>
+                                                                                </p>
+                                                                                <p>
+                                                                                    <span data-contrast="none">We look after dogs, cats, horses, ponies, small animals, and birds. Don’t worry if you have more than one pet – the more the merrier! Before you book, we will schedule a meet &amp; greet visit to discuss your animal care routine and ensure we stick to your normal pet care practice.</span>
+                                                                                    <span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true}"></span>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2021/11/Gerbil-min-1024x664.jpeg" alt="Pop-in Pet Sitting"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>Dog Sitting</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>Dog Sitting</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>Are you heading out and don’t want to leave your dog alone? Our trusted dog sitting service is here to help! Much like babysitting, our professional dog sitters come to your home to provide personalised care and companionship for your furry friend.</p>
+                                                                                <p>You can choose the hours that work best for you, and we’ll ensure your dog feels comfortable and cared for in their own home environment. This service is perfect for dogs that need one-to-one attention or feel more at ease staying in their familiar surroundings.</p>
+                                                                                <p>Whether it’s for a few hours or an extended period, our experienced team will make sure your dog has everything they need while you’re away. From feeding and playtime to cuddles and walks, we’re here to keep tails wagging!</p>
+                                                                                <p>Discover the difference of in-home care with our dog sitting services – reliable, flexible, and tailored to you and your pet’s needs.</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2024/12/Jenny-garden-1024x683.jpg" alt="Dog Sitting"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>Dog Boarding</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>Dog Boarding</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>If you can’t bear the idea of leaving your dog in kennels when you go away on holiday, then our home-from-home dog boarding service is perfect for you! Our friendly, local home boarders offer all the comforts of home.</p>
+                                                                                <p>Your dog will be welcomed into a trusted pet sitter’s home as part of their family. While you’re away, your dog will be going on a lovely holiday of their own. They will become part of the family, enjoying regular walks and plenty of individual attention. Dog boarding is perfect for dogs who get on with other dogs and people.</p>
+                                                                                <p>Our branches are full members of the PCFA, licensed, trained, insured and police checked for peace of mind. Our high animal welfare standards mean your dog won’t be mass boarded but will instead be cared for as part of the family.</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2024/12/Kathryn-V-sofa-1024x683.jpg" alt="Dog Boarding"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>Doggy Daycare</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>Doggy Daycare</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>Our doggy daycare service is perfect for busy pet parents who want their dogs to enjoy a day full of play, companionship, and care. At We Love Pets, we provide a safe, stimulating, and welcoming environment where your dog can socialise, explore, and relax under our team’s constant supervision.</p>
+                                                                                <p>Each day is tailored to your dog’s needs, whether they’re zooming around the garden, enjoying a scenic walk, or curling up for a cosy nap. With plenty of games, exercise, and cuddles, we’ll keep them happy and entertained.</p>
+                                                                                <p>Your dog’s safety and wellbeing are our top priorities. Our fully trained, pet first aid-certified team ensures a calm, relaxed setting with plenty of attention and care. Unlike mass boarding, we offer a home-from-home experience, treating your dog like part of the family. At the end of their fun-filled day, your dog will come home happy, content, and ready for a well-deserved rest, giving you complete peace of mind.</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2024/11/retired-couple-hosts-1-min-1024x685.jpg" alt="Doggy Daycare"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>House Sitting</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>House Sitting</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>Going on holiday? Our professional house-sitting service ensures your pets remain happy and secure in their familiar surroundings while giving you peace of mind about your home’s safety.</p>
+                                                                                <p>Our experienced sitters are fully insured, police-checked, and trained in pet first aid. Before you leave, you’ll meet your sitter to discuss your needs and feel confident your home and pets are in expert hands.</p>
+                                                                                <p>We provide regular updates, including photos and messages, so you’ll stay connected with your pets and home while away. From maintaining daily routines to offering loving care, our sitters make sure your pets feel at ease.</p>
+                                                                                <p>Enjoy your trip without worry—our service offers the perfect balance of pet care and home security.</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2024/12/Laura-laughing--1024x674.jpg" alt="House Sitting"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>Cat Sitting</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>Cat Sitting</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>Our cat sitting service keeps your feline friend happy, comfortable, and well cared for while you’re away. Each visit is tailored to their routine, with plenty of playtime, attention, and all-important naps. We’ll clean litter trays, refresh food and water, and ensure your cat is content, keeping a close eye on their health and happiness.</p>
+                                                                                <p>Every cat is unique, so we take time to understand their needs. Whether they love fuss or prefer quiet companionship, our trusted sitters provide care to suit their personality.</p>
+                                                                                <p>Our cat sitting service ensures your cat stays relaxed and stress-free with loving care from our trained, pet-first-aid-certified team. You’ll also receive updates, photos, and peace of mind knowing your cat is in expert hands. Let us take care of them so you can enjoy yourself worry-free!</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2024/12/WeLovePets_40-1024x724.jpg" alt="Cat Sitting"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="bb-tabs__slide bb-tabs__ismedia">
+                                                                    <div class="bb-tabs__block flex">
+
+                                                                        <div class="bb-tabs__body">
+                                                                            <div class="bb-tabs__subtitle">
+                                                                                <h6>Puppy Care</h6>
+                                                                            </div>
+                                                                            <div class="bb-tabs__title">
+                                                                                <h3>Puppy Care</h3>
+                                                                            </div>
+                                                                            <div class="bb-tabs__excerpt">
+                                                                                <p>At We Love Pets, we offer tailored puppy care visits to keep your pup happy, safe, and well-looked after while you’re away. Puppies need extra care and attention during their early months, and we’re here to help with visits that suit your puppy’s age, needs, and your schedule.</p>
+                                                                                <p>Our friendly team will keep your puppy entertained with plenty of playtime, cuddles, and care. Each visit can include essentials like feeding, fresh water, toilet breaks, and gentle reinforcement of basic training to help your pup develop good habits.</p>
+                                                                                <p>As your puppy grows, they’ll have the chance to graduate to group dog walks with a few carefully chosen doggie friends. This is a great way to build confidence, encourage socialisation, and explore the world in a fun, safe way. You can relax knowing your puppy is in the hands of fully trained, pet-first-aid-certified carers who love dogs as much as you do!</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="bb-tabs__image">
+                                                                            <div class="media-container"><img decoding="async" src="../wp-content/uploads/2024/12/Puppy-kissing-Alec-CUTE-1024x683.jpg" alt="Puppy Care"/></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-5acdb91 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5acdb91" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6124c0b" data-id="6124c0b" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-8a05b3d elementor-widget elementor-widget-image" data-id="8a05b3d" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img loading="lazy" decoding="async" width="1536" height="1086" src="../wp-content/uploads/2024/12/ProCare-Certification-1536x1086.jpg" class="attachment-1536x1536 size-1536x1536 wp-image-300078" alt="" srcset="../wp-content/uploads/2024/12/ProCare-Certification-1536x1086.jpg 1536w, ../wp-content/uploads/2024/12/ProCare-Certification-300x212.jpg 300w, ../wp-content/uploads/2024/12/ProCare-Certification-1024x724.jpg 1024w, ../wp-content/uploads/2024/12/ProCare-Certification-768x543.jpg 768w, ../wp-content/uploads/2024/12/ProCare-Certification-2048x1448.jpg 2048w, ../wp-content/uploads/2024/12/ProCare-Certification-624x441.jpg 624w" sizes="(max-width: 1536px) 100vw, 1536px"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-1610afa8 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1610afa8" data-element_type="section" id="contact" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7e9bcefd" data-id="7e9bcefd" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-6c66c63d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6c66c63d" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4c51b029" data-id="4c51b029" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-233c6dc3 elementor-widget elementor-widget-heading" data-id="233c6dc3" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">Contact</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-4cfe93c8 elementor-widget elementor-widget-text-editor" data-id="4cfe93c8" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
+                                                                        <p>Call Tracey on
+                                                                            <a href="tel:07702093075">07702 093075</a>
+                                                                            or complete the contact form.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-c95059d elementor-widget elementor-widget-image" data-id="c95059d" data-element_type="widget" data-widget_type="image.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <img loading="lazy" decoding="async" width="640" height="416" src="../wp-content/uploads/2023/02/1-3-min-1024x665.jpg" class="attachment-large size-large wp-image-90499" alt="" srcset="../wp-content/uploads/2023/02/1-3-min-1024x665.jpg 1024w, ../wp-content/uploads/2023/02/1-3-min-300x195.jpg 300w, ../wp-content/uploads/2023/02/1-3-min-768x499.jpg 768w, ../wp-content/uploads/2023/02/1-3-min-1536x998.jpg 1536w, ../wp-content/uploads/2023/02/1-3-min-2048x1331.jpg 2048w, ../wp-content/uploads/2023/02/1-3-min-624x405.jpg 624w" sizes="(max-width: 640px) 100vw, 640px"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6a9b8e52" data-id="6a9b8e52" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-26bb715a elementor-widget elementor-widget-html" data-id="26bb715a" data-element_type="widget" data-widget_type="html.default">
+                                                                <div class="elementor-widget-container">
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-a6cd98c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a6cd98c" data-element_type="section" id="areascovered" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4635441c" data-id="4635441c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-4691d6ce elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4691d6ce" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-63922045" data-id="63922045" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-50a3813d elementor-widget elementor-widget-heading" data-id="50a3813d" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">Areas covered by our Reading branch:
+                                                                    </h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-5f24a988 elementor-widget elementor-widget-text-editor" data-id="5f24a988" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
+                                                                        <p>Our Reading branch also covers surrounding areas. See the locations we cover listed below:</p>
+                                                                        <p>
+                                                                            <strong>RG1</strong>
+                                                                            – Reading town and surrounding areas.</p>
+                                                                        <p>
+                                                                            <strong>RG2</strong>
+                                                                            – Arborfield, Arborfield Cross and Shinfield.</p>
+                                                                        <p>Don&#8217;t see your area? There’s a strong chance we can help you anyway, so why not get in touch!</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-145ae4be elementor-widget elementor-widget-button" data-id="145ae4be" data-element_type="widget" data-widget_type="button.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-button-wrapper">
+                                                                        <a class="elementor-button elementor-button-link elementor-size-md" href="../index.html%3Fp=8621.html#contact">
+                                                                            <span class="elementor-button-content-wrapper">
+                                                                                <span class="elementor-button-text">Get in touch
+                                                                                </span>
+                                                                            </span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-48de6d4b" data-id="48de6d4b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-73274b59 elementor-widget elementor-widget-google_maps" data-id="73274b59" data-element_type="widget" data-widget_type="google_maps.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-custom-embed">
+                                                                        <iframe loading="lazy" src="https://maps.google.com/maps?q=Reading%2C%20united%20kingdom&#038;t=m&#038;z=11&#038;output=embed&#038;iwloc=near" title="Reading, united kingdom" aria-label="Reading, united kingdom"></iframe>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-365e38c1 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="365e38c1" data-element_type="section" id="pricing" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4826b699" data-id="4826b699" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-2a788632 elementor-widget elementor-widget-text-editor" data-id="2a788632" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
+                                                        <p>Pricing</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-36496184 elementor-widget elementor-widget-heading" data-id="36496184" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h3 class="elementor-heading-title elementor-size-default">'Woofin good prices'</h3>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-2fa3f1ce elementor-widget elementor-widget-text-editor" data-id="2fa3f1ce" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color">
+                                                        <p>If you&#8217;re interested in care for more than one dog or cat, small animals, reptiles or exotics &#8211; and everything in between &#8211; please get in touch for a personalised quote!</p>
+                                                        <p>*Please note that all prices include VAT.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-1ad0d2a2 elementor-widget elementor-widget-button" data-id="1ad0d2a2" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="../index.html%3Fp=8621.html#contact">
+                                                            <span class="elementor-button-content-wrapper">
+                                                                <span class="elementor-button-text">Get a personalised quote</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-441db879 elementor-widget elementor-widget-heading" data-id="441db879" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">What our customers say</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-1d8c2407 elementor-testimonial--skin-bubble elementor-testimonial--align-left elementor-testimonial--layout-image_inline elementor-arrows-yes elementor-widget elementor-widget-global elementor-global-1041 elementor-widget-testimonial-carousel" data-id="1d8c2407" data-element_type="widget" data-settings="{&quot;slides_per_view&quot;:&quot;1&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:13,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="testimonial-carousel.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-swiper">
+                                                        <div class="elementor-main-swiper swiper">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                We have 2 giant rabbits and finding someone who is reliable and understands their needs is very difficult. However now we have found Tracey we won’t ever worry again! We can’t fault the service. Never had a problem booking her to visit them. Highly recommended for pet sitting.
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Helen Forbes</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Reading East</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                We can't praise Kathryn highly enough. She was a pleasure to deal with, went above and beyond and made us feel completely reassured. She gave us regular updates while we were away and you could tell she genuinely cared for our pets. We wouldn't hesitate to recommend her and her company.
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Katie Waldock</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Burgess Hill</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                Absolutely fantastic service. Our BIG dogs had a fabulous walk with Simon and we were able to enjoy our day out knowing they were in safe hands, amazing value for money. I have already booked again 🙂
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Sarah Morgan</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Colchester</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                I used we love pets to visit my much loved elderly cat . On each visit I received photos and an update. They took patience with her and cleaned up after her . I have already recommended them to my family and friends and would do to anyone
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Kath Ben</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Bolton</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                My (very fussy) dogs love Jon which says a lot! I feel completely at ease leaving them in his care, they love spending the day with him, and always come home happy after a day of fun 🙂
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Amber Prudhoe</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Newcastle upon Tyne</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                Having moved to the area recently - feel very lucky to have found such a great, professional and welcoming boarding for our lively black Labrador.
+                                                                                Paul certainly made him feel part of the family - even included a day trip to the lakes and swim in Windermere 👍
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Bertie Hilditch</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Lytham</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                Andrea and Shan are a godsend, they walk my rescue dog Indi, a nervous girl, every week and have been so patient with her. She has come on leaps and bounds and I know the interaction with Andrea and Shan has been instrumental in this. I get amazing pics and updates. I wouldn't hesitate to recommend We Love Pets and can't imagine having my dog go with anyone else!
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Sarah Rowan</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Sutton</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                Pet sitting for small animals. Nothing too much trouble. For anyone any on business for a few days, or needing dog visits now back at work. Highly recommend these.
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Sandra Ibauk</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Swindon</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="elementor-testimonial">
+                                                                        <div class="elementor-testimonial__content">
+                                                                            <div class="elementor-testimonial__text">
+                                                                                Emma and her team have helped me with puppy ever since he was old enough to join the gang. Now he has weekly walks and gets to meet and play with other dogs too. That one hour walk has him coming home so happy and content!The team are incredibly reliable and have helped me with home visits too when I've had to be away for long periods in the day. Professional and friendly. Thank you!!!
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-testimonial__footer">
+                                                                            <cite class="elementor-testimonial__cite">
+                                                                                <span class="elementor-testimonial__name">Jess Ramsgate</span>
+                                                                                <span class="elementor-testimonial__title">Customer - Bridgend</span>
+                                                                            </cite>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">
+                                                                <i aria-hidden="true" class="eicon-chevron-left"></i>
+                                                                <span class="elementor-screen-only">Previous</span>
+                                                            </div>
+                                                            <div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0">
+                                                                <i aria-hidden="true" class="eicon-chevron-right"></i>
+                                                                <span class="elementor-screen-only">Next</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-604fe814" data-id="604fe814" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-19519523 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="19519523" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-29585a33" data-id="29585a33" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-69c1610f elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="69c1610f" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-">
+                                                                                <i aria-hidden="true" class="fas fa-dog"></i>
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <div class="elementor-icon-box-content">
+
+                                                                            <p class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Dog Walks - from £24 an hour
+                                                                                </span>
+                                                                            </p>
+
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Our dog walks focus on exercise, socialisation, and fun! We match dogs with a suitable walking buddy, but never walk in groups of more than four - as part of our 'No Pack Walk Policy.' Our friendly, knowledgeable dog walkers will send updates and photos whilst out, before returning your dog clean, happy, and ready for a rest.
+                                                                            </p>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-407b7077" data-id="407b7077" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-47386726 elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="47386726" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-">
+                                                                                <i aria-hidden="true" class="fas fa-home"></i>
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <div class="elementor-icon-box-content">
+
+                                                                            <p class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Home Boarding - from £65 per 24 hours
+                                                                                </span>
+                                                                            </p>
+
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Give your dog a holiday while you're away through our home boarding service. Your pup will stay with one of our fully licensed &amp; experienced host families in a safe, comfortable home - rather than a kennel. We'll stick to your dog's diet, routine, and walking schedule for a true home-from-home experience.<br><b>Animal activity licence for home boarding:&nbsp;HB01</b>
+                                                                            </p>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-b62d8df elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b62d8df" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7615cf50" data-id="7615cf50" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-4637b68a elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="4637b68a" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-">
+                                                                                <i aria-hidden="true" class="fas fa-cat"></i>
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <div class="elementor-icon-box-content">
+
+                                                                            <p class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Pet Visits - from £19.50 for 30 mins
+                                                                                </span>
+                                                                            </p>
+
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Need someone to pop in and check on your pet? Our trustworthy and reliable pet care professionals will make a visit for tailored feeding, medication administration, play & interaction, toilet breaks, and to clear any messes. They're DBS checked for your peace of mind, and will send regular updates and photos during the visit.
+                                                                            </p>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-dbe9e89" data-id="dbe9e89" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-6926ec5c elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="6926ec5c" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-">
+                                                                                <i aria-hidden="true" class="fas fa-house-user"></i>
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <div class="elementor-icon-box-content">
+
+                                                                            <p class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    House Sitting - from £100 per 24 hours
+                                                                                </span>
+                                                                            </p>
+
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Keep to your pet's normal routine while on holiday with our house sitting service. One of our pet care professionals will stay with your pet in your home to follow their routine, clean hutches and cages, give medication, go for walks, let out for the toilet, help around the house, and give your pet plenty of fuss and love!
+                                                                            </p>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-613291b3 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="613291b3" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5b13b80e" data-id="5b13b80e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-272e7edb elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="272e7edb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7b0de094" data-id="7b0de094" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-5f02c324 elementor-widget elementor-widget-heading" data-id="5f02c324" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h3 class="elementor-heading-title elementor-size-default">Why we love Reading
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-57864ded elementor-widget elementor-widget-image" data-id="57864ded" data-element_type="widget" data-widget_type="image.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <img loading="lazy" decoding="async" width="2560" height="1557" src="../wp-content/uploads/2023/02/2-2-min-scaled.jpg" class="attachment-full size-full wp-image-90498" alt="" srcset="../wp-content/uploads/2023/02/2-2-min-scaled.jpg 2560w, ../wp-content/uploads/2023/02/2-2-min-300x182.jpg 300w, ../wp-content/uploads/2023/02/2-2-min-1024x623.jpg 1024w, ../wp-content/uploads/2023/02/2-2-min-768x467.jpg 768w, ../wp-content/uploads/2023/02/2-2-min-1536x934.jpg 1536w, ../wp-content/uploads/2023/02/2-2-min-2048x1246.jpg 2048w, ../wp-content/uploads/2023/02/2-2-min-624x379.jpg 624w" sizes="(max-width: 2560px) 100vw, 2560px"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-c446427 elementor-widget elementor-widget-text-editor" data-id="c446427" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color">
+                                                                        <p>
+                                                                            <em>This branch of We Love Pets is owned and operated by Tracey Alexander trading as We Love Pets Reading.</em>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-43330006" data-id="43330006" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-6a8a3fce elementor-widget elementor-widget-text-editor" data-id="6a8a3fce" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="bb-theme-elementor-wrap bb-elementor-custom-color">
+                                                                        <h3>
+                                                                            <strong>Our favourite places to take dogs in Reading&nbsp;</strong>
+                                                                        </h3>
+                                                                        <p>Prospect Park is a lovely large park with lots to do with your dog! Whether your dog loves lots of lush green grass for an epic game of fetch, or trees to sniff around and explore, your dog will be happy here.</p>
+                                                                        <p>Palmer Park is another lovely park with lots of space to run and play on grassy fields, and trees to sniff and play under. This park is great for whatever your dog wants to get up to!</p>
+                                                                        <p>Fobney Island Nature Reserve is a pretty waterside walk with grassy banks and tree-lined paths, it’s a nice place to explore with lots to sniff and play with. Some of the shallower parts of the water are also perfect for a quick dip and a cool down.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+
+                    </div>
+                    <!-- .bb-grid -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- #content -->
+
+
+			<Footer />
+
+        </div>
+        <!-- #page -->
+
+
+        <!-- Meta Pixel Event Code -->
+        <script type='text/javascript'>
+            document.addEventListener('wpcf7mailsent', function (event) {
+                if ("fb_pxl_code" in event.detail.apiResponse) {
+                    eval(event.detail.apiResponse.fb_pxl_code);
+                }
+            }, false);
+        </script>
+        <!-- End Meta Pixel Event Code -->
+        <div id='fb-pxl-ajax-code'></div>
+        <script type='text/javascript'>
+            const lazyloadRunObserver = () => {
+                const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
+                const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            let lazyloadBackground = entry.target;
+                            if (lazyloadBackground) {
+                                lazyloadBackground.classList.add('e-lazyloaded');
+                            }
+                            lazyloadBackgroundObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {rootMargin: '200px 0px 200px 0px'});
+                lazyloadBackgrounds.forEach((lazyloadBackground) => {
+                    lazyloadBackgroundObserver.observe(lazyloadBackground);
+                });
+            };
+            const events = ['DOMContentLoaded', 'elementor/lazyload/observe',];
+            events.forEach((event) => {
+                document.addEventListener(event, lazyloadRunObserver);
+            });
+        </script>
+        <link rel='stylesheet' id='e-sticky-css' href='/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css' type='text/css' media='all'/>
+        <script type="text/javascript" id="site_tracking-js-extra">
+            /* <![CDATA[ */
+            var php_data = {
+                "ac_settings": {
+                    "tracking_actid": null,
+                    "site_tracking_default": 1
+                },
+                "user_email": ""
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/4acea96f9d778c2c0e0a36162f0accf4.js" id="site_tracking-js"></script>
+        <script type="text/javascript" src="/wp-includes/js/jquery/ui/core.min.js" id="jquery-ui-core-js"></script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/5450c8088773942b1735fdbbd59f1a3a.js" id="wphb-8-js"></script>
+        <script type="text/javascript" src="/wp-content/uploads/theplus-addons/theplus-post-117.min.js" id="theplus-front-js-js"></script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/76f2c5dbf34064f0c5b130dd2671fca9.js" id="wphb-9-js"></script>
+        <script type="text/javascript" id="wphb-10-js-extra">
+            /* <![CDATA[ */
+            var njt_wa_global = {
+                "ajax_url": "https:\/\/welovepets.care\/wp-admin\/admin-ajax.php",
+                "nonce": "c536a5d5c6",
+                "defaultAvatarSVG": "<svg width=\"48px\" height=\"48px\" class=\"nta-whatsapp-default-avatar\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\n            viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">\n            <path style=\"fill:#EDEDED;\" d=\"M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0\n            S512,114.759,512,254.234S395.476,512,255.117,512c-44.138,0-86.51-14.124-124.469-35.31L0,512z\"\/>\n            <path style=\"fill:#55CD6C;\" d=\"M137.71,430.786l7.945,4.414c32.662,20.303,70.621,32.662,110.345,32.662\n            c115.641,0,211.862-96.221,211.862-213.628S371.641,44.138,255.117,44.138S44.138,137.71,44.138,254.234\n            c0,40.607,11.476,80.331,32.662,113.876l5.297,7.945l-20.303,74.152L137.71,430.786z\"\/>\n            <path style=\"fill:#FEFEFE;\" d=\"M187.145,135.945l-16.772-0.883c-5.297,0-10.593,1.766-14.124,5.297\n            c-7.945,7.062-21.186,20.303-24.717,37.959c-6.179,26.483,3.531,58.262,26.483,90.041s67.09,82.979,144.772,105.048\n            c24.717,7.062,44.138,2.648,60.028-7.062c12.359-7.945,20.303-20.303,22.952-33.545l2.648-12.359\n            c0.883-3.531-0.883-7.945-4.414-9.71l-55.614-25.6c-3.531-1.766-7.945-0.883-10.593,2.648l-22.069,28.248\n            c-1.766,1.766-4.414,2.648-7.062,1.766c-15.007-5.297-65.324-26.483-92.69-79.448c-0.883-2.648-0.883-5.297,0.883-7.062\n            l21.186-23.834c1.766-2.648,2.648-6.179,1.766-8.828l-25.6-57.379C193.324,138.593,190.676,135.945,187.145,135.945\"\/>\n        <\/svg>",
+                "defaultAvatarUrl": "https:\/\/welovepets.care\/wp-content\/plugins\/wp-whatsapp\/assets\/img\/whatsapp_logo.svg",
+                "timezone": "+00:00",
+                "i18n": {
+                    "online": "Online",
+                    "offline": "Offline"
+                },
+                "urlSettings": {
+                    "onDesktop": "api",
+                    "onMobile": "api",
+                    "openInNewTab": "ON"
+                }
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/57bccfa4ccb022636221114a62d68a72.js" id="wphb-10-js"></script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/ccc9cb295375988fb62d0d93ba52170a.js" id="wphb-11-js"></script>
+        <script type="text/javascript" id="wphb-12-js-extra">
+            /* <![CDATA[ */
+            var bs_data = {
+                "jm_ajax": "https:\/\/welovepets.care\/jm-ajax\/",
+                "ajaxurl": "https:\/\/welovepets.care\/wp-admin\/admin-ajax.php",
+                "show_notifications": "1",
+                "show_messages": "1",
+                "facebook_label": "Share on Facebook",
+                "twitter_label": "Post on X",
+                "more_menu_title": "Menu Items",
+                "translation": {
+                    "comment_posted": "Your comment has been posted.",
+                    "comment_btn_loading": "Please Wait...",
+                    "choose_a_file_label": "Choose a file",
+                    "email_validation": "Please enter a valid email address."
+                },
+                "gamipress_badge_label": "Badge",
+                "nonce_list_grid": "99ad403739"
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/e76439969850d42c560f233988b8b317.js" id="wphb-12-js"></script>
+        <script type="text/javascript" src="/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
+        <script type="text/javascript" src="/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+        <script type="text/javascript" src="/wp-content/plugins/elementor/assets/js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/41ad6eb42896754ae2089f4562ef8c81.js" id="wphb-13-js"></script>
+        <script type="text/javascript" id="wphb-13-js-after">
+            /* <![CDATA[ */
+            wp.i18n.setLocaleData({'text direction\u0004ltr': ['ltr']});
+            /* ]]> */
+        </script>
+        <script type="text/javascript" id="elementor-pro-frontend-js-before">
+            /* <![CDATA[ */
+            var ElementorProFrontendConfig = {
+                "ajaxurl": "https:\/\/welovepets.care\/wp-admin\/admin-ajax.php",
+                "nonce": "01e7180a86",
+                "urls": {
+                    "assets": "https:\/\/welovepets.care\/wp-content\/plugins\/elementor-pro\/assets\/",
+                    "rest": "https:\/\/welovepets.care\/wp-json\/"
+                },
+                "settings": {
+                    "lazy_load_background_images": true
+                },
+                "popup": {
+                    "hasPopUps": false
+                },
+                "shareButtonsNetworks": {
+                    "facebook": {
+                        "title": "Facebook",
+                        "has_counter": true
+                    },
+                    "twitter": {
+                        "title": "Twitter"
+                    },
+                    "linkedin": {
+                        "title": "LinkedIn",
+                        "has_counter": true
+                    },
+                    "pinterest": {
+                        "title": "Pinterest",
+                        "has_counter": true
+                    },
+                    "reddit": {
+                        "title": "Reddit",
+                        "has_counter": true
+                    },
+                    "vk": {
+                        "title": "VK",
+                        "has_counter": true
+                    },
+                    "odnoklassniki": {
+                        "title": "OK",
+                        "has_counter": true
+                    },
+                    "tumblr": {
+                        "title": "Tumblr"
+                    },
+                    "digg": {
+                        "title": "Digg"
+                    },
+                    "skype": {
+                        "title": "Skype"
+                    },
+                    "stumbleupon": {
+                        "title": "StumbleUpon",
+                        "has_counter": true
+                    },
+                    "mix": {
+                        "title": "Mix"
+                    },
+                    "telegram": {
+                        "title": "Telegram"
+                    },
+                    "pocket": {
+                        "title": "Pocket",
+                        "has_counter": true
+                    },
+                    "xing": {
+                        "title": "XING",
+                        "has_counter": true
+                    },
+                    "whatsapp": {
+                        "title": "WhatsApp"
+                    },
+                    "email": {
+                        "title": "Email"
+                    },
+                    "print": {
+                        "title": "Print"
+                    },
+                    "x-twitter": {
+                        "title": "X"
+                    },
+                    "threads": {
+                        "title": "Threads"
+                    }
+                },
+                "facebook_sdk": {
+                    "lang": "en_US",
+                    "app_id": ""
+                },
+                "lottie": {
+                    "defaultAnimationUrl": "https:\/\/welovepets.care\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"
+                }
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="/wp-content/plugins/elementor-pro/assets/js/frontend.min.js" id="elementor-pro-frontend-js"></script>
+        <script type="text/javascript" id="wphb-14-js-before">
+            /* <![CDATA[ */
+            var elementorFrontendConfig = {
+                "environmentMode": {
+                    "edit": false,
+                    "wpPreview": false,
+                    "isScriptDebug": false
+                },
+                "i18n": {
+                    "shareOnFacebook": "Share on Facebook",
+                    "shareOnTwitter": "Share on Twitter",
+                    "pinIt": "Pin it",
+                    "download": "Download",
+                    "downloadImage": "Download image",
+                    "fullscreen": "Fullscreen",
+                    "zoom": "Zoom",
+                    "share": "Share",
+                    "playVideo": "Play Video",
+                    "previous": "Previous",
+                    "next": "Next",
+                    "close": "Close",
+                    "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right",
+                    "a11yCarouselPrevSlideMessage": "Previous slide",
+                    "a11yCarouselNextSlideMessage": "Next slide",
+                    "a11yCarouselFirstSlideMessage": "This is the first slide",
+                    "a11yCarouselLastSlideMessage": "This is the last slide",
+                    "a11yCarouselPaginationBulletMessage": "Go to slide"
+                },
+                "is_rtl": false,
+                "breakpoints": {
+                    "xs": 0,
+                    "sm": 480,
+                    "md": 768,
+                    "lg": 1025,
+                    "xl": 1440,
+                    "xxl": 1600
+                },
+                "responsive": {
+                    "breakpoints": {
+                        "mobile": {
+                            "label": "Mobile Portrait",
+                            "value": 767,
+                            "default_value": 767,
+                            "direction": "max",
+                            "is_enabled": true
+                        },
+                        "mobile_extra": {
+                            "label": "Mobile Landscape",
+                            "value": 880,
+                            "default_value": 880,
+                            "direction": "max",
+                            "is_enabled": false
+                        },
+                        "tablet": {
+                            "label": "Tablet Portrait",
+                            "value": 1024,
+                            "default_value": 1024,
+                            "direction": "max",
+                            "is_enabled": true
+                        },
+                        "tablet_extra": {
+                            "label": "Tablet Landscape",
+                            "value": 1200,
+                            "default_value": 1200,
+                            "direction": "max",
+                            "is_enabled": false
+                        },
+                        "laptop": {
+                            "label": "Laptop",
+                            "value": 1366,
+                            "default_value": 1366,
+                            "direction": "max",
+                            "is_enabled": false
+                        },
+                        "widescreen": {
+                            "label": "Widescreen",
+                            "value": 2400,
+                            "default_value": 2400,
+                            "direction": "min",
+                            "is_enabled": false
+                        }
+                    },
+                    "hasCustomBreakpoints": false
+                },
+                "version": "3.25.10",
+                "is_static": false,
+                "experimentalFeatures": {
+                    "additional_custom_breakpoints": true,
+                    "e_swiper_latest": true,
+                    "e_nested_atomic_repeaters": true,
+                    "e_optimized_control_loading": true,
+                    "e_onboarding": true,
+                    "e_css_smooth_scroll": true,
+                    "theme_builder_v2": true,
+                    "home_screen": true,
+                    "landing-pages": true,
+                    "nested-elements": true,
+                    "editor_v2": true,
+                    "link-in-bio": true,
+                    "floating-buttons": true
+                },
+                "urls": {
+                    "assets": "https:\/\/welovepets.care\/wp-content\/plugins\/elementor\/assets\/",
+                    "ajaxurl": "https:\/\/welovepets.care\/wp-admin\/admin-ajax.php",
+                    "uploadUrl": "https:\/\/welovepets.care\/wp-content\/uploads"
+                },
+                "nonces": {
+                    "floatingButtonsClickTracking": "691dad9743"
+                },
+                "swiperClass": "swiper",
+                "settings": {
+                    "page": [],
+                    "editorPreferences": []
+                },
+                "kit": {
+                    "active_breakpoints": [
+                        "viewport_mobile", "viewport_tablet"
+                    ],
+                    "global_image_lightbox": "yes",
+                    "lightbox_enable_counter": "yes",
+                    "lightbox_enable_fullscreen": "yes",
+                    "lightbox_enable_zoom": "yes",
+                    "lightbox_enable_share": "yes",
+                    "lightbox_title_src": "title",
+                    "lightbox_description_src": "description"
+                },
+                "post": {
+                    "id": 117,
+                    "title": "Trusted%2C%20Reliable%20Dog%20Walkers%20%26%20Pet%20Sitters%20%7C%20We%20Love%20Pets",
+                    "excerpt": "",
+                    "featuredImage": "https:\/\/welovepets.care\/wp-content\/uploads\/2021\/11\/A05I8410-min-1024x683.jpg"
+                }
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="/wp-content/uploads/hummingbird-assets/bfe775c8f6edbfb7f9c7faf702be5437.js" id="wphb-14-js"></script>
+
+    </body>
 </html>
+<!-- Hummingbird cache file was created in 17.834300994873 seconds, on 06-05-25 20:01:23 -->
