@@ -1,0 +1,104 @@
+type="text/css"
+id="wp-custom-css"
+/**
+* Plus Addons: Nav Customizations
+*/
+.plus-mobile-menu {
+    padding-top: 10px !important;
+    padding-bottom: 24px !important;
+}
+
+.plus-navigation-menu ul li,
+.plus-mobile-menu ul li {
+    width: inherit !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    background: inherit !important;
+    box-shadow: inherit !important;
+    border-radius: inherit !important;
+    max-height: inherit !important;
+    margin: inherit !important;
+    overflow: inherit !important;
+}
+
+.plus-mobile-menu-content .nav > li {
+    padding: 0 20px;
+}
+
+.plus-mobile-menu-content .nav > li > a {
+    border-bottom: 1px solid #dee4e960;
+}
+
+.plus-navigation-wrap ul.dropdown-menu {
+    top: 74px !important;
+}
+
+.plus-navigation-wrap .plus-mobile-menu-content {
+    top: 55px;
+    border-top: 1px solid #efefef !important;
+    background-color: #ffffff;
+}
+
+
+/**
+* Nav: Custom CTA Button
+*/
+.plus-navigation-wrap .nav-button-cta.menu-item a {
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px !important;
+    text-align: center !important;
+}
+
+.plus-navigation-wrap .outline.nav-button-cta.menu-item a {
+    border: solid 1px #313131 !important;
+    color: #313131 !important;
+}
+
+.plus-navigation-wrap .bg.nav-button-cta.menu-item a {
+    background-color: #d93a49 !important;
+    color: #ffffff !important;
+    border: 1px solid transparent !important;
+}
+
+.plus-navigation-wrap .bg.nav-button-cta.menu-item a:hover {
+    background-color: #bf0516 !important;
+    border-radius: 30px;
+}
+
+.plus-navigation-wrap .outline.nav-button-cta.menu-item a:hover {
+    background-color: #f7f7f7 !important;
+    border-radius: 30px;
+}
+
+@media screen and(max-width: 991px) {
+    .plus-navigation-wrap .nav-button-cta.menu-item a {
+        margin-top: 10px !important;
+    }
+}
+
+
+/**
+* BuddyBoss: Mobile Menu Panel
+*/
+
+.bb-mobile-panel-wrapper .logo-wrap {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #efefef90;
+}
+
+.bb-mobile-panel-wrapper img.bb-mobile-logo {
+    max-width: 50px;
+}
+
+.bb-mobile-panel-wrapper .bb-login-section .button {
+    background-color: #d93a49;
+    color: #ffffff;
+    border-color: #d93a49;
+}
+
+.bb-mobile-panel-wrapper .bb-login-section .button:hover {
+    color: #ffffff;
+    border-color: #d93a49;
+    box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, .1);
+}
