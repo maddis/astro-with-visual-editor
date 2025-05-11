@@ -220,7 +220,7 @@ const { title, description, image = '/blog-placeholder-about.jpg' } = Astro.prop
 	name="generator" content="Site Kit by Google 1.144.0"/>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11467746310"></script>
-	<script>
+	<script is:inline>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
 			dataLayer.push(arguments);
@@ -231,7 +231,7 @@ const { title, description, image = '/blog-placeholder-about.jpg' } = Astro.prop
 	</script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16684905939"></script>
-	<script>
+	<script is:inline>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
 			dataLayer.push(arguments);
@@ -242,7 +242,7 @@ const { title, description, image = '/blog-placeholder-about.jpg' } = Astro.prop
 	</script>
 	<!-- Event snippet for Page view conversion page
 	In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-	<script>
+	<script is:inline>
 		function gtag_report_conversion(url) {
 			var callback = function () {
 				if (typeof(url) != 'undefined') {
