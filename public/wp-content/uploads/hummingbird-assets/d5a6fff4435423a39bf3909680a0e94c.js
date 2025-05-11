@@ -1,1 +1,0 @@
-/**handles:buddyboss-child-js**/
