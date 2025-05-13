@@ -23,3 +23,13 @@ Deploy your own version of this example site, by clicking the button below. This
 ## More examples
 
 Explore other examples of using the Netlify platform and primitives (with or without a framework) in this [examples repo](https://github.com/netlify/examples).
+
+
+# Run locally
+
+```bash
+npm run dev
+```
+
+Also run `stackbit dev` to start the Stackbit dev server.
+

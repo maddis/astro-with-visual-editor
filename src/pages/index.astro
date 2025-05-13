@@ -13,6 +13,9 @@ const posts = (await getCollection('blog')).sort(
 const branches = (await getCollection('branch')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const homeEntries = await getCollection('home');
+const homeData = homeEntries[0].data;
 ---
 
 
@@ -25,27 +28,27 @@ const branches = (await getCollection('branch')).sort(
         class="home page-template page-template-page-fullscreen page-template-page-fullscreen-php page page-id-117 buddyboss-theme bb-template-v2 bb-custom-typo  header-style-1  menu-style-standard sticky-header elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-117">
 
         <!-- Google Tag Manager (noscript) snippet added by Site Kit -->
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKKXG7B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        </noscript>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKKXG7B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
         <!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
 
 
-        <div id="page" class="site">
+		<div id="page" class="site">
 
-            <Header />
+			<Header />
 
 
             <div id="content" class="site-content">
 
 
-                <div class="container">
+				<div class="container">
                     <div class="bb-grid site-content-grid">
                         <div data-elementor-type="wp-page" data-elementor-id="117" class="elementor elementor-117" data-elementor-post-type="page">
                             <section class="elementor-section elementor-top-section elementor-element elementor-element-4ea2e40f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4ea2e40f" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/ntBWQIgLYgU&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
                                 <div class="elementor-background-video-container">
                                     <div class="elementor-background-video-embed"></div>
-                                </div>
+						</div>
                                 <div class="elementor-background-overlay"></div>
                                 <div class="elementor-container elementor-column-gap-default">
                                     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3a0668a1" data-id="3a0668a1" data-element_type="column">
@@ -56,20 +59,20 @@ const branches = (await getCollection('branch')).sort(
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="elementor-element elementor-element-2a4b1e35 elementor-widget elementor-widget-heading" data-id="2a4b1e35" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <h1 class="elementor-heading-title elementor-size-default">UK’s #1 Pet Sitting &amp; Dog Walking Company</h1>
-                                                                </div>
-                                                            </div>
+                                                                    <h1 class="elementor-heading-title elementor-size-default">{homeData.title}</h1>
+								</div>
+						</div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </section>
+							</div>
+						</div>
+					</section>
                                             <section class="elementor-section elementor-inner-section elementor-element elementor-element-7a75ff51 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7a75ff51" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-33e5baa3" data-id="33e5baa3" data-element_type="column">
                                                         <div class="elementor-widget-wrap"></div>
                                                     </div>
-                                                </div>
-                                            </section>
+						</div>
+					</section>
                                             <section class="elementor-section elementor-inner-section elementor-element elementor-element-f5f7510 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f5f7510" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-default">
                                                     <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-aaf602c" data-id="aaf602c" data-element_type="column">
@@ -79,10 +82,10 @@ const branches = (await getCollection('branch')).sort(
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-mobile-custom-size bb-elementor-custom-line-height">
                                                                         <h2>
                                                                             <strong>
-                                                                                <span style="color: #ffffff;">Nationally known, locally owned</span>
+                                                                                <span style="color: #ffffff;">{homeData.subtitle}</span>
                                                                             </strong>
                                                                         </h2>
-                                                                    </div>
+				</div>
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-11fe9503 elementor-align-left elementor-widget elementor-widget-button" data-id="11fe9503" data-element_type="widget" data-widget_type="button.default">
