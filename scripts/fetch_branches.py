@@ -32,14 +32,26 @@ def extract_text_editors(html):
     return text_editors, text_editors_markdown
 
 def extract_image_urls(html):
+    """Extract image URLs from HTML content"""
     soup = BeautifulSoup(html, "html.parser")
     image_urls = []
-    for widget in soup.find_all(attrs={"data-widget_type": "image.default"}):
-        for img in widget.find_all("img"):
-            src = img.get("src")
-            if src:
-                image_urls.append(src)
-    return image_urls
+    
+    # Look for images in various contexts
+    for img in soup.find_all("img"):
+        # Check both src and data-src attributes
+        src = img.get("src") or img.get("data-src")
+        if src and not src.startswith("data:"):
+            image_urls.append(src)
+    
+    # Look for background images in style attributes
+    for elem in soup.find_all(attrs={"style": True}):
+        style = elem["style"]
+        if "background-image" in style:
+            match = re.search(r"url\\(['\"]?([^'\"\\)]+)['\"]?\\)", style)
+            if match and not match.group(1).startswith("data:"):
+                image_urls.append(match.group(1))
+    
+    return list(dict.fromkeys(image_urls))  # Remove duplicates
 
 def extract_typeform_urls(html):
     soup = BeautifulSoup(html, "html.parser")
