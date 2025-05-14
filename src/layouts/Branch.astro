@@ -10,7 +10,17 @@ type Props = CollectionEntry<'branch'>['data'] & {
 filePath: CollectionEntry<'branch'>['filePath']
 };
 
-const { filePath, branchName, ownerName, phoneNumber, email, pubDate, updatedDate } = Astro.props;
+const { 
+    filePath, 
+    branchName, 
+    ownerName, 
+    phoneNumber, 
+    email, 
+    pubDate, 
+    updatedDate, 
+    areasSummary,
+    postcodes
+    } = Astro.props;
 ---
 
 <!-- This page is cached by the Hummingbird Performance plugin v3.13.1 - https://wordpress.org/plugins/hummingbird-performance/. -->
@@ -477,9 +487,9 @@ const { filePath, branchName, ownerName, phoneNumber, email, pubDate, updatedDat
                                                             <div class="elementor-element elementor-element-434e5863 elementor-widget elementor-widget-text-editor" data-id="434e5863" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
-                                                                        <p>Call Sam on
-                                                                            <a href="tel:07733 220154">
-                                                                                <strong>07733 220154</strong>
+                                                                        <p>Call {ownerName} on
+                                                                            <a href="tel:{phoneNumber}">
+                                                                                <strong>{phoneNumber}</strong>
                                                                             </a>
                                                                             or complete the contact form.</p>
                                                                     </div>
@@ -533,13 +543,12 @@ const { filePath, branchName, ownerName, phoneNumber, email, pubDate, updatedDat
                                                             <div class="elementor-element elementor-element-31fc4597 elementor-widget elementor-widget-text-editor" data-id="31fc4597" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
-                                                                        <p>Our {branchName} branch also covers surrounding areas. See the locations we cover listed below:</p>
-                                                                        <p>
-                                                                            <strong>RG9
-                                                                            </strong>– Harpsden, Nettlebed, Turville, Nuffield, Fawley, Assendon, Shiplake, Mill End, Crowsley, Skirmett, Binfield Heath</p>
-                                                                        <p>
-                                                                            <strong>RG10
-                                                                            </strong>– Cockpole Green, Crazies Hill, Warren Row, Hare Hatch, Knowl Hill</p>
+                                                                        <p>{areasSummary}</p>
+                                                                        {postcodes.map((postcode) => (
+                                                                            <p>
+                                                                                <strong>{postcode.code}</strong>– {postcode.areas}
+                                                                            </p>
+                                                                        ))}
                                                                         <p>Don&#8217;t see your area? There’s a strong chance we can help you anyway, so why not get in touch!</p>
                                                                     </div>
                                                                 </div>

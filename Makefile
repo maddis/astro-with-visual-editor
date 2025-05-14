@@ -18,6 +18,6 @@ activate:
 
 fetch:
 	echo "\tFetching branches..."
-	python3 scripts/fetch_branches.py NUM_BRANCHES=5
+	python3 scripts/fetch_branches.py 20
 	
 

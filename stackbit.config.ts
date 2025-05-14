@@ -48,6 +48,8 @@ export default defineStackbitConfig({
           { name: "ownerName", type: "string" },
           { name: "phoneNumber", type: "string" },
           { name: "email", type: "string" },
+          { name: "areasSummary", type: "string" },
+          { name: "postcodes", type: "list", items: { type: "object", fields: [{ name: "areas", type: "string" }, { name: "code", type: "string" }] } },
         ],
       }],
       assetsConfig: {

@@ -8,9 +8,10 @@ import shutil
 
 # Fix the path to be inside the project directory
 import pathlib
+import sys
 
-# Get number of branches from parameters passed and default to 5
-num_branches = int(os.getenv("NUM_BRANCHES", 5))
+# Get number of branches from first arg and default to 5
+num_branches = int(sys.argv[1]) if len(sys.argv) > 1 else 5
 
 SCRIPT_DIR = pathlib.Path(__file__).parent.absolute()
 PROJECT_DIR = SCRIPT_DIR.parent
@@ -175,15 +176,14 @@ def extract_owner_name(markdown_content):
     match = re.search(r'Meet ([A-Za-z]+(?:\s[A-Za-z]+)?)', markdown_content)
     if match:
         return match.group(1)
-    return None
+    return ""
 
 def extract_phone_number(markdown_content):
     """Extract phone number from the content"""
     # Look for phone numbers in various formats with optional tel: prefix
     match = re.search(r'(?:tel:)?\s*([0-9]{5}\s*[0-9]{6}|[0-9]{11}|[0-9]{4}\s*[0-9]{3}\s*[0-9]{4})', markdown_content)
     if match:
-        # Remove any spaces from the phone number
-        # Return phone number as string (not int)
+        # Remove any spaces but keep as string to preserve leading zero
         return re.sub(r'\s+', '', match.group(1))
     return None
 
@@ -387,8 +387,8 @@ def fetch_and_write_markdown():
             # "local_image_count": len(local_image_urls),
             # "typeform_urls": filtered_typeform_urls,
             # "google_maps_urls": google_maps_urls,
-            # "areas_summary": "Our " + slug.capitalize() + " branch also covers surrounding areas. See the locations we cover listed below.",
-            # "postcodes": postcodes,
+            "areasSummary": "Our " + slug.capitalize() + " branch also covers surrounding areas. See the locations we cover listed below.",
+            "postcodes": postcodes,
             # "favourite_places_summary": "We are extremely lucky to have so many beautiful dog walking spots in and around " + slug.capitalize() + ".",
             # "favourite_places": favourite_places
         }
@@ -399,7 +399,7 @@ def fetch_and_write_markdown():
             yaml.dump(main_frontmatter, f, allow_unicode=True)
             f.write("---\n\n")
             # Write the main content
-            f.write(summary_content)
+            # f.write(summary_content)
             f.write("\n\n")
         
         total_files += 1
