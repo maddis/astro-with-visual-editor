@@ -1,58 +1,10 @@
 ---
-areas_summary: Our Heaton-lostock branch also covers surrounding areas. See the locations
-  we cover listed below.
-branchName: We Love Pets Heaton and Lostock
-date: '2025-03-26T08:50:22'
-excerpt: '<p>Award-winning dog walking, pet sitting and home boarding in Heaton and
-  Lostock Get in touch We Love Pets Heaton and Lostock &#8211;  Dog walker, pet&hellip;</p>
-
-  '
-favourite_places:
-- description: Queens Park is a lovely spot for a dog walk! A traditional Victorian
-    park, there’s lots of grassy space, trees to explore, and even plenty of places
-    to sit down for a picnic and a rest if you want to spend a little longer there.
-  name: Queens Park is a lovely spot for a dog
-- description: Moses Gate Country Park is a fantastic place for a dog walk, with plenty
-    of trails, open fields, and water features to explore. Your pup will love the
-    variety of spaces, and it’s a great way to enjoy the outdoors together.
-  name: Moses Gate Country Park is a fantastic place for a dog
-- description: Jumbles Country Park has lots to keep a curious dog entertained! Wooded
-    areas to sniff and explore, lovely walking paths around the reservoir, and a great
-    café for a drink and a snack. It’s also a beautiful spot for you to take in while
-    walking your dog.
-  name: Jumbles Country Park has lots to keep a curious dog
-favourite_places_summary: We are extremely lucky to have so many beautiful dog walking
-  spots in and around Heaton-lostock.
-google_maps_urls:
-- https://maps.google.com/maps?q=lostock%20&t=m&z=11&output=embed&iwloc=near
-layout: layout-branch.njk
-link: https://welovepets.care/branch/heaton-lostock/
-local_image_count: 3
-local_image_urls:
-- /Users/mattaddis/Projects/wlp/git/welovepets.care/src/content/branch/images/heaton-lostock/Julie-from-Bolton.jpg
-- /Users/mattaddis/Projects/wlp/git/welovepets.care/src/content/branch/images/heaton-lostock/A05I6198-min-1024x683.jpg
-- /Users/mattaddis/Projects/wlp/git/welovepets.care/src/content/branch/images/heaton-lostock/A05I5538-scaled.jpeg
-name: Heaton and Lostock
-permalink: /branch/heaton-lostock/
-postcodes:
-- areas: Heaton, Markland Hill, Doffcocker
-  code: BL1
-- areas: Lostock, University Area, Chewhill
-  code: BL3
+branchName: Heaton and Lostock
+email: heatonandlostock@welovepets.email
+ownerName: null
+phoneNumber: 07501832938
 pubDate: '2025-03-26'
-sections:
-- cta
-- summary
-- services
-- guarantee
-- contact
-- areas_covered
-- pricing
-- favourite_places
-slug: heaton-lostock
-title: We Love Pets Heaton and Lostock
 type: branch
-typeform_urls: []
 updatedDate: '2025-03-26'
 ---
 

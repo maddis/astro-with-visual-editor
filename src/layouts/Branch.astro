@@ -10,7 +10,7 @@ type Props = CollectionEntry<'branch'>['data'] & {
 filePath: CollectionEntry<'branch'>['filePath']
 };
 
-const { filePath, branchName, pubDate, updatedDate } = Astro.props;
+const { filePath, branchName, ownerName, phoneNumber, email, pubDate, updatedDate } = Astro.props;
 ---
 
 <!-- This page is cached by the Hummingbird Performance plugin v3.13.1 - https://wordpress.org/plugins/hummingbird-performance/. -->
@@ -53,7 +53,7 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="elementor-element elementor-element-404313c7 elementor-widget elementor-widget-heading" data-id="404313c7" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <h1 class="elementor-heading-title elementor-size-default">Award-winning dog walking, pet sitting and home boarding in Henley-on-Thames</h1>
+                                                                    <h1 class="elementor-heading-title elementor-size-default">Award-winning dog walking, pet sitting and home boarding in {branchName}</h1>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -102,7 +102,7 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
                                                                         <h4>
-                                                                            <strong>We Love Pets Henley-on-Thames &#8211;
+                                                                            <strong>We Love Pets {branchName} &#8211;
                                                                             </strong>
                                                                         </h4>
                                                                     </div>
@@ -117,9 +117,9 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
                                                                         <p style="font-weight: 400;">Our
-                                                                            <strong>We Love Pets Henley-on-Thames</strong>
-                                                                            is a lovely branch of pet care experts offering amazing pet care services in Henley-on-Thames, Crowsley, Warren Row and many more of the surrounding areas. The whole team are huge animal lovers and enthusiastic about providing pet care for the animals in their community, so you can trust that your pet is in safe hands with us.</p>
-                                                                        <p style="font-weight: 400;">We offer wonderful services for dog walking and pet sitting for a whole host of animals, big and small: dogs, small animals, horses, exotic pets, and birds! We’re certain that you will find exactly the service that you need through our Henley-on-Thames branch.</p>
+                                                                            <strong>We Love Pets {branchName}</strong>
+                                                                            is a lovely branch of pet care experts offering amazing pet care services in {branchName}, Crowsley, Warren Row and many more of the surrounding areas. The whole team are huge animal lovers and enthusiastic about providing pet care for the animals in their community, so you can trust that your pet is in safe hands with us.</p>
+                                                                        <p style="font-weight: 400;">We offer wonderful services for dog walking and pet sitting for a whole host of animals, big and small: dogs, small animals, horses, exotic pets, and birds! We’re certain that you will find exactly the service that you need through our {branchName} branch.</p>
                                                                         <p style="font-weight: 400;">We will make sure to talk to you about our services ahead of time, to make sure you can find the best one to suit your needs. We want to learn all we can about your pets, and all the things that make them unique, so we can create a personalised pet care plan just for them.</p>
                                                                     </div>
                                                                 </div>
@@ -151,21 +151,19 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
                                                                         <h3>
-                                                                            <strong>Meet Sam | We Love Pets Henley-on-Thames</strong>
+                                                                            <strong>Meet {ownerName} | We Love Pets {branchName}</strong>
                                                                         </h3>
                                                                         <p>
                                                                             <span style="color: #cb333b;">
                                                                                 <strong>
-                                                                                    <a href="tel:07733 220154">07733 220154</a>
+                                                                                    <a href="tel:{phoneNumber}">{phoneNumber}</a>
                                                                                     |
-                                                                                    <a href="https://welovepets.care/cdn-cgi/l/email-protection#87efe2e9ebe2fec7f0e2ebe8f1e2f7e2f3f4a9e2eae6eeeb" target="_blank" rel="noopener">
-                                                                                        <span class="__cf_email__" data-cfemail="deb6bbb0b2bba79ea9bbb2b1a8bbaebbaaadf0bbb3bfb7b2">[email&#160;protected]</span>
-                                                                                    </a>
+                                                                                    <a href="mailto:{email}">{email}</a>
                                                                                 </strong>
                                                                             </span>
                                                                         </p>
-                                                                        <p style="font-weight: 400;">Our lovely branch manager for We Love Pets Henley-on-Thames is Sam! Sam has had a lifetime of pet ownership, so she knows exactly how to care for a whole host of animals, and her general enthusiasm and years of experience running her branch means she knows exactly how to look after the animals in her community.</p>
-                                                                        <p style="font-weight: 400;">Sam is City and Guilds qualified in dog walking and local to the area so knows all the local walks that are the most fun and safe. Everyone is also DBS checked, pet first aid trained and fully insured for the job, so you can be sure that your pet is in very safe hands.</p>
+                                                                        <p style="font-weight: 400;">Our lovely branch manager for We Love Pets {branchName} is {ownerName}! {ownerName} has had a lifetime of pet ownership, so she knows exactly how to care for a whole host of animals, and her general enthusiasm and years of experience running her branch means she knows exactly how to look after the animals in her community.</p>
+                                                                        <p style="font-weight: 400;">{ownerName} is City and Guilds qualified in dog walking and local to the area so knows all the local walks that are the most fun and safe. Everyone is also DBS checked, pet first aid trained and fully insured for the job, so you can be sure that your pet is in very safe hands.</p>
                                                                         <p style="font-weight: 400;">We understand how important it is that your pets are happy and comfortable with us, so we make sure that all our time is split to include physical and mental stimulation that will benefit their body health and their brain wellbeing.</p>
                                                                     </div>
                                                                 </div>
@@ -528,14 +526,14 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                             <div class="elementor-element elementor-element-2f02afb0 elementor-widget elementor-widget-heading" data-id="2f02afb0" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
                                                                     <h2 class="elementor-heading-title elementor-size-default">
-                                                                        <h2 class="elementor-heading-title elementor-size-default" style="font-size: 38px;line-height: 44px;font-family: var( --e-global-typography-primary-font-family ), Sans-serif;font-weight: bold;letter-spacing: -0.7px">Areas covered by our Henley-on-Thames branch:</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default" style="font-size: 38px;line-height: 44px;font-family: var( --e-global-typography-primary-font-family ), Sans-serif;font-weight: bold;letter-spacing: -0.7px">Areas covered by our {branchName} branch:</h2>
                                                                     </h2>
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-31fc4597 elementor-widget elementor-widget-text-editor" data-id="31fc4597" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
-                                                                        <p>Our Henley-on-Thames branch also covers surrounding areas. See the locations we cover listed below:</p>
+                                                                        <p>Our {branchName} branch also covers surrounding areas. See the locations we cover listed below:</p>
                                                                         <p>
                                                                             <strong>RG9
                                                                             </strong>– Harpsden, Nettlebed, Turville, Nuffield, Fawley, Assendon, Shiplake, Mill End, Crowsley, Skirmett, Binfield Heath</p>
@@ -565,7 +563,7 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                             <div class="elementor-element elementor-element-13fffc75 elementor-widget elementor-widget-google_maps" data-id="13fffc75" data-element_type="widget" data-widget_type="google_maps.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="elementor-custom-embed">
-                                                                        <iframe loading="lazy" src="https://maps.google.com/maps?q=henley-on-thames%2C%20united%20kingdom&#038;t=m&#038;z=11&#038;output=embed&#038;iwloc=near" title="henley-on-thames, united kingdom" aria-label="henley-on-thames, united kingdom"></iframe>
+                                                                        <iframe loading="lazy" src="https://maps.google.com/maps?q={branchName}%2C%20united%20kingdom&#038;t=m&#038;z=11&#038;output=embed&#038;iwloc=near" title="{branchName}, united kingdom" aria-label="{branchName}, united kingdom"></iframe>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -924,7 +922,7 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="elementor-element elementor-element-13d2aa44 elementor-widget elementor-widget-heading" data-id="13d2aa44" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <h3 class="elementor-heading-title elementor-size-default">Why we love Henley-on-Thames</h3>
+                                                                    <h3 class="elementor-heading-title elementor-size-default">Why we love {branchName}</h3>
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-36ca8be8 elementor-widget elementor-widget-image" data-id="36ca8be8" data-element_type="widget" data-widget_type="image.default">
@@ -935,7 +933,7 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                             <div class="elementor-element elementor-element-4877d0d elementor-widget elementor-widget-text-editor" data-id="4877d0d" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color">
-                                                                        <p>This branch of We Love Pets is owned and operated by Sam Baxter trading as We Love Pets Henley-on-Thames.</p>
+                                                                        <p>This branch of We Love Pets is owned and operated by Sam Baxter trading as We Love Pets {branchName}.</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -947,7 +945,7 @@ const { filePath, branchName, pubDate, updatedDate } = Astro.props;
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color">
                                                                         <h3>
-                                                                            <strong>Our favourite places to take dogs in&nbsp;Henley-on-Thames</strong>
+                                                                            <strong>Our favourite places to take dogs in&nbsp;{branchName}</strong>
                                                                         </h3>
                                                                         <p>National Trust Greys Court is a lovely place for a walk with the dog. It offers lots of paths around all the pretty gardens and has a nearby grassy field for running and playing on. The whol<font face="var( --e-global-typography-text-font-family ), Sans-serif">e area is great fun for the dog&nbsp;</font>and also<font face="var( --e-global-typography-text-font-family ), Sans-serif">&nbsp;lovely and scenic for the humans too!</font>
                                                                         </p>

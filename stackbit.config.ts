@@ -44,7 +44,10 @@ export default defineStackbitConfig({
         fields: [
           { name: "branchName", type: "string", required: true, default: "Branch Name" },
           { name: "pubDate", type: "date", required: true },
-          { name: "updatedDate", type: "date" }
+          { name: "updatedDate", type: "date" },
+          { name: "ownerName", type: "string" },
+          { name: "phoneNumber", type: "string" },
+          { name: "email", type: "string" },
         ],
       }],
       assetsConfig: {

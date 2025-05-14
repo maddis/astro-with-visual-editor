@@ -1,69 +1,10 @@
 ---
-areas_summary: Our Cambourne branch also covers surrounding areas. See the locations
-  we cover listed below.
-branchName: We Love Pets Cambourne
-date: '2025-03-10T15:09:29'
-excerpt: '<p>Award-winning dog walking, pet sitting and home boarding in Cambourne
-  Get in touch We Love Pets Cambourne &#8211;  Dog walker, pet sitter and dog boarder&hellip;</p>
-
-  '
-favourite_places:
-- description: '###'
-  name: Our favourite places to take dogs in Cambourne
-- description: Cambourne Nature Reserve, right in the heart of Cambourne, this 90-hectare
-    reserve boasts woodlands, lakes, ponds, and grasslands. It’s a haven for wildlife,
-    and the numerous trails provide a serene environment for you and your dog to explore.
-  name: Cambourne Nature
-- description: Madingley Hall Gardens just a short drive from Cambourne, this beautiful
-    garden has open areas where you can walk your dog on a lead. The grounds are peaceful
-    and a nice place to enjoy nature.
-  name: Madingley Hall Gardens just a short drive from
-- description: is a lovely spot just a short drive from Cambourne, Papworth Green
-    offers wide open fields and quiet lanes. It’s a great place for a relaxing walk
-    with your dog, and you can often spot wildlife too.
-  name: Papworth Green
-- description: a village close to Cambourne, offers a few nice walking paths around
-    open fields. It’s quiet and peaceful, making it a perfect spot for dogs to enjoy
-    some time outdoors.
-  name: Highfields Caldecote
-favourite_places_summary: We are extremely lucky to have so many beautiful dog walking
-  spots in and around Cambourne.
-google_maps_urls:
-- https://maps.google.com/maps?q=Cambourne%2C%20united%20kingdom&t=m&z=11&output=embed&iwloc=near
-layout: layout-branch.njk
-link: https://welovepets.care/branch/cambourne/
-local_image_count: 3
-local_image_urls:
-- /Users/mattaddis/Projects/wlp/git/welovepets.care/src/content/branch/images/cambourne/Cambourne-1-scaled.jpeg
-- /Users/mattaddis/Projects/wlp/git/welovepets.care/src/content/branch/images/cambourne/Cambourne-3-1024x683.jpeg
-- /Users/mattaddis/Projects/wlp/git/welovepets.care/src/content/branch/images/cambourne/Cambourne-2.jpeg
-name: Cambourne
-permalink: /branch/cambourne/
-postcodes:
-- areas: Cambourne, Elsworth, Papworth Everard, Bourn, Comberton.
-  code: CB23
-- areas: Longstanton, Swavesey, Oakington
-  code: CB24
-- areas: Girton, Eddington
-  code: CB3
-- areas: St Neots, Eynesbury, Eaton Socon, Abbotsley, Eltisley
-  code: PE19
-- areas: Gamlingay, Great Gransden, Little Gransden
-  code: SG19
+branchName: Cambourne
+email: cambourne@welovepets.email
+ownerName: Amanda
+phoneNumber: 07415734058
 pubDate: '2025-03-10'
-sections:
-- cta
-- summary
-- services
-- guarantee
-- contact
-- areas_covered
-- pricing
-- favourite_places
-slug: cambourne
-title: We Love Pets Cambourne
 type: branch
-typeform_urls: []
 updatedDate: '2025-04-02'
 ---
 

@@ -21,6 +21,9 @@ const branch = defineCollection({
 		branchName: z.string(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
+		ownerName: z.string().optional(),
+		email: z.string().optional(),
+		phoneNumber: z.string().optional(),
 	}),
 });
 

@@ -169,32 +169,6 @@ def extract_contact(markdown_content):
         ["contact us", "get in touch", "book now", "call us today"]
     )
 
-def extract_owner_name(markdown_content):
-    """Extract owner name from the content by looking for 'Meet [Name]' pattern"""
-    # Look for the pattern in the markdown content
-    match = re.search(r'Meet ([A-Za-z]+(?:\s[A-Za-z]+)?)', markdown_content)
-    if match:
-        return match.group(1)
-    return None
-
-def extract_phone_number(markdown_content):
-    """Extract phone number from the content"""
-    # Look for phone numbers in various formats with optional tel: prefix
-    match = re.search(r'(?:tel:)?\s*([0-9]{5}\s*[0-9]{6}|[0-9]{11}|[0-9]{4}\s*[0-9]{3}\s*[0-9]{4})', markdown_content)
-    if match:
-        # Remove any spaces from the phone number
-        # Return phone number as string (not int)
-        return re.sub(r'\s+', '', match.group(1))
-    return None
-
-def extract_email(markdown_content):
-    """Extract email from the content"""
-    # Look for email addresses ending in @welovepets.email
-    match = re.search(r'([a-zA-Z0-9._%+-]+@welovepets\.email)', markdown_content)
-    if match:
-        return match.group(1)
-    return None
-
 def extract_pricing(markdown_content):
     """Extract pricing content from markdown"""
     return extract_section_content(
@@ -371,9 +345,6 @@ def fetch_and_write_markdown():
             "branchName": branchName,
             "pubDate": pubDate,
             "updatedDate": updatedDate,
-            "ownerName": extract_owner_name(all_markdown),
-            "phoneNumber": extract_phone_number(all_markdown),
-            "email": extract_email(all_markdown),
             # "title": title,
             # "name": name,
             # "date": date,
