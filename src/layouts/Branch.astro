@@ -18,7 +18,6 @@ const {
     email, 
     pubDate, 
     updatedDate, 
-    areasSummary,
     postcodes
     } = Astro.props;
 ---
@@ -543,7 +542,7 @@ const {
                                                             <div class="elementor-element elementor-element-31fc4597 elementor-widget elementor-widget-text-editor" data-id="31fc4597" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
-                                                                        <p>{areasSummary}</p>
+                                                                        <p>Our {branchName} branch also covers surrounding areas. See the locations we cover listed below.</p>
                                                                         {postcodes.map((postcode) => (
                                                                             <p>
                                                                                 <strong>{postcode.code}</strong>– {postcode.areas}

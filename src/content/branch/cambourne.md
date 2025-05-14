@@ -1,6 +1,4 @@
 ---
-areasSummary: Our Cambourne branch also covers surrounding areas. See the locations
-  we cover listed below.
 branchName: Cambourne
 email: cambourne@welovepets.email
 ownerName: Amanda

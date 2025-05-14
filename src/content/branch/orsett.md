@@ -1,6 +1,4 @@
 ---
-areasSummary: Our Orsett branch also covers surrounding areas. See the locations we
-  cover listed below.
 branchName: Orsett
 email: orsett@welovepets.email
 ownerName: Shirley

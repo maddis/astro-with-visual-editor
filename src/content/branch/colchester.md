@@ -1,6 +1,4 @@
 ---
-areasSummary: Our Colchester branch also covers surrounding areas. See the locations
-  we cover listed below.
 branchName: Colchester
 email: colchester@welovepets.email
 ownerName: Gemma

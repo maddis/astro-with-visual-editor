@@ -1,6 +1,4 @@
 ---
-areasSummary: Our Medway branch also covers surrounding areas. See the locations we
-  cover listed below.
 branchName: Medway
 email: medway@welovepets.email
 ownerName: Cheryl

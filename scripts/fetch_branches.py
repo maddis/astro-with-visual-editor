@@ -399,7 +399,6 @@ def fetch_and_write_markdown():
             # "local_image_count": len(local_image_urls),
             # "typeform_urls": filtered_typeform_urls,
             # "google_maps_urls": google_maps_urls,
-            "areasSummary": "Our " + slug.capitalize() + " branch also covers surrounding areas. See the locations we cover listed below.",
             "postcodes": postcodes,
             # "favourite_places_summary": "We are extremely lucky to have so many beautiful dog walking spots in and around " + slug.capitalize() + ".",
             # "favourite_places": favourite_places

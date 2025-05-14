@@ -1,6 +1,4 @@
 ---
-areasSummary: Our Heaton-lostock branch also covers surrounding areas. See the locations
-  we cover listed below.
 branchName: Heaton and Lostock
 email: heatonandlostock@welovepets.email
 ownerName: ''

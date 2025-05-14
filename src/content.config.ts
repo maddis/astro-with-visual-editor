@@ -24,7 +24,6 @@ const branch = defineCollection({
 		ownerName: z.string().optional(),
 		email: z.string().optional(),
 		phoneNumber: z.number().optional(),
-		areasSummary: z.string().optional(),
 		postcodes: z.array(
 			z.object({
 				areas: z.string(),
