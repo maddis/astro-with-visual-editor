@@ -30,6 +30,7 @@ const branch = defineCollection({
 				code: z.string(),
 			})
 		),
+		profileImage: z.string().optional(),
 	}),
 });
 

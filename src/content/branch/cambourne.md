@@ -1,6 +1,19 @@
 ---
 branchName: Cambourne
 email: cambourne@welovepets.email
+local_image_count: 11
+local_image_urls:
+- /src/content/_images/cambourne-1.jpeg
+- /src/content/_images/cambourne-2.jpg
+- /src/content/_images/cambourne-3.jpeg
+- /src/content/_images/cambourne-4.jpg
+- /src/content/_images/cambourne-5.jpg
+- /src/content/_images/cambourne-6.jpg
+- /src/content/_images/cambourne-7.jpg
+- /src/content/_images/cambourne-8.jpg
+- /src/content/_images/cambourne-9.jpg
+- /src/content/_images/cambourne-11.jpeg
+- /src/content/_images/cambourne-12.jpeg
 ownerName: Amanda
 phoneNumber: 07415734058
 postcodes:

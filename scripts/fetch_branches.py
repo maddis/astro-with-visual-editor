@@ -1,9 +1,9 @@
 import requests
 import os
-import yaml
+import re
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
-import re
+import yaml
 import shutil
 
 # Fix the path to be inside the project directory
@@ -31,27 +31,92 @@ def extract_text_editors(html):
             text_editors.append(text)
     return text_editors, text_editors_markdown
 
+def save_image(url, slug, index):
+    """Save image from URL or local path with branch slug prefix"""
+    try:
+        # Extract file extension
+        ext = os.path.splitext(url)[1].lower()
+        if not ext:
+            ext = '.jpg'  # Default to jpg if no extension
+        
+        # Create images directory if it doesn't exist
+        images_dir = os.path.join(PROJECT_DIR, 'src', 'content', '_images')
+        os.makedirs(images_dir, exist_ok=True)
+        
+        # Create filename with branch slug prefix
+        filename = f"{slug}-{index}{ext}"
+        filepath = os.path.join(images_dir, filename)
+        
+        if url.startswith('http://') or url.startswith('https://'):
+            # Download from URL
+            response = requests.get(url)
+            response.raise_for_status()
+            with open(filepath, 'wb') as f:
+                f.write(response.content)
+        else:
+            # Copy from local path
+            src_path = url if url.startswith('/') else os.path.join(PROJECT_DIR, url)
+            if os.path.exists(src_path):
+                shutil.copy2(src_path, filepath)
+            else:
+                print(f"Source image not found: {src_path}")
+                return None
+            
+        return f"/src/content/_images/{filename}"
+    except Exception as e:
+        print(f"Error saving image {url}: {e}")
+        return None
+
 def extract_image_urls(html):
     """Extract image URLs from HTML content"""
     soup = BeautifulSoup(html, "html.parser")
     image_urls = []
+    base_url = "https://welovepets.care"
+    
+    print("\nSearching for images...")
     
     # Look for images in various contexts
     for img in soup.find_all("img"):
         # Check both src and data-src attributes
         src = img.get("src") or img.get("data-src")
-        if src and not src.startswith("data:"):
-            image_urls.append(src)
+        if src:
+            print(f"Found image source: {src}")
+            # Skip data URLs
+            if src.startswith('data:'):
+                print("  Skipping data URL")
+                continue
+            # Convert relative URLs to absolute
+            if src.startswith('/'):
+                src = base_url + src
+                print(f"  Converted to absolute URL: {src}")
+            # Add URL if it's from the website
+            if 'welovepets.care' in src:
+                print(f"  Adding URL: {src}")
+                image_urls.append(src)
+            else:
+                print("  Not from welovepets.care, skipping")
     
     # Look for background images in style attributes
     for elem in soup.find_all(attrs={"style": True}):
         style = elem["style"]
         if "background-image" in style:
+            print(f"Found background style: {style}")
             match = re.search(r"url\\(['\"]?([^'\"\\)]+)['\"]?\\)", style)
-            if match and not match.group(1).startswith("data:"):
-                image_urls.append(match.group(1))
+            if match:
+                url = match.group(1)
+                print(f"  Extracted URL: {url}")
+                if url.startswith('/'):
+                    url = base_url + url
+                    print(f"  Converted to absolute URL: {url}")
+                if not url.startswith('data:') and 'welovepets.care' in url:
+                    print(f"  Adding URL: {url}")
+                    image_urls.append(url)
+                else:
+                    print("  Not valid or not from welovepets.care, skipping")
     
-    return list(dict.fromkeys(image_urls))  # Remove duplicates
+    urls = list(dict.fromkeys(image_urls))  # Remove duplicates
+    print(f"\nFound {len(urls)} unique image URLs")
+    return urls
 
 def extract_typeform_urls(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -321,28 +386,26 @@ def fetch_and_write_markdown():
         date = page.get("date", "")
         link = page.get("link", "")
         text_editors, text_editors_markdown = extract_text_editors(content)
-        filtered_image_urls = [url for url in extract_image_urls(content) if "ProCare-Certification" not in url]
+        soup = BeautifulSoup(content, "html.parser")
         
-        # Download images and build local paths
+        # Find all images in the content
         local_image_urls = []
-        images_dir = os.path.join(OUTPUT_DIR, "images", slug)
-        os.makedirs(images_dir, exist_ok=True)
+        saved_images = []
+        for img in soup.find_all("img"):
+            src = img.get("src")
+            if src and not src.startswith('data:') and 'welovepets.care' in src:
+                print(f"Found image: {src}")
+                local_image_urls.append(src)
         
-        # For now, just record the image URLs without downloading them
-        # This will make the script run much faster for testing
-        for img_url in filtered_image_urls:
-            filename = os.path.basename(img_url.split("?")[0])
-            local_path = os.path.join(OUTPUT_DIR, "images", slug, filename)
-            local_image_urls.append(local_path)
-            
-        print(f"  Processing branch: {slug}")
-            
-        typeform_urls = extract_typeform_urls(content)
-        filtered_typeform_urls = [url for url in typeform_urls if url.startswith('https://form.typeform.com') or url.startswith('form.typeform.com')]
-        google_maps_urls = extract_google_maps_urls(content)
+        # Save images
+        for i, url in enumerate(local_image_urls):
+            if 'ProCare-Certification' not in url:  # Skip certification images
+                saved_url = save_image(url, slug, i + 1)
+                if saved_url:
+                    saved_images.append(saved_url)
         
-        # Combine all markdown content
-        all_markdown = "\n\n".join(text_editors_markdown) if text_editors_markdown else ""
+        # Get content
+        all_markdown = md(content)
         
         # Extract sections
         summary_content = extract_summary(all_markdown)
@@ -354,7 +417,12 @@ def fetch_and_write_markdown():
         contact_content = extract_contact(all_markdown)
         guarantee_content = extract_guarantee(all_markdown)
         
-        # Extract structured data from content
+        # Extract other data from content
+        typeform_urls = extract_typeform_urls(content)
+        filtered_typeform_urls = [url for url in typeform_urls if url.startswith('https://form.typeform.com') or url.startswith('form.typeform.com')]
+        google_maps_urls = extract_google_maps_urls(content)
+        
+        # Extract postcodes and favourite places
         postcodes = extract_postcodes_from_content(areas_covered_content)
         favourite_places = extract_favourite_places_from_content(favourite_places_content)
         
@@ -377,32 +445,22 @@ def fetch_and_write_markdown():
         if favourite_places_content:
             sections.append("favourite_places")
         
+        print(f"Found {len(local_image_urls)} images for {branchName}")
+
         # Create a single branch file with all data
         main_frontmatter = {
-            "type": type,
             "branchName": branchName,
-            "pubDate": pubDate,
-            "updatedDate": updatedDate,
+            "email": extract_email(all_markdown),
             "ownerName": extract_owner_name(all_markdown),
             "phoneNumber": extract_phone_number(all_markdown),
-            "email": extract_email(all_markdown),
-            # "title": title,
-            # "name": name,
-            # "date": date,
-            # "excerpt": excerpt,
-            # "link": link,
-            # "slug": slug,
-            # "layout": "layout-branch.njk",
-            # "permalink": f"/branch/{slug}/",
-            # "sections": ["cta", "summary", "services", "guarantee", "contact", "areas_covered", "pricing", "favourite_places"],
-            # "local_image_urls": local_image_urls,
-            # "local_image_count": len(local_image_urls),
-            # "typeform_urls": filtered_typeform_urls,
-            # "google_maps_urls": google_maps_urls,
-            "postcodes": postcodes,
-            # "favourite_places_summary": "We are extremely lucky to have so many beautiful dog walking spots in and around " + slug.capitalize() + ".",
-            # "favourite_places": favourite_places
+            "pubDate": pubDate,
+            "type": "branch",
+            "updatedDate": updatedDate,
+            "local_image_urls": saved_images,
+            "local_image_count": len(saved_images),
+            "postcodes": postcodes
         }
+        print(f"Saved {len(saved_images)} images for {branchName}")
         
         md_filename = os.path.join(OUTPUT_DIR, f"{slug}.md")
         with open(md_filename, "w", encoding="utf-8") as f:

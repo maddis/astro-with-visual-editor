@@ -1,6 +1,19 @@
 ---
 branchName: Medway
 email: medway@welovepets.email
+local_image_count: 11
+local_image_urls:
+- /src/content/_images/medway-1.jpg
+- /src/content/_images/medway-2.jpg
+- /src/content/_images/medway-3.jpeg
+- /src/content/_images/medway-4.jpg
+- /src/content/_images/medway-5.jpg
+- /src/content/_images/medway-6.jpg
+- /src/content/_images/medway-7.jpg
+- /src/content/_images/medway-8.jpg
+- /src/content/_images/medway-9.jpg
+- /src/content/_images/medway-11.jpg
+- /src/content/_images/medway-12.jpg
 ownerName: Cheryl
 phoneNumber: 07702589958
 postcodes:

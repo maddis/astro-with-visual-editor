@@ -48,6 +48,7 @@ export default defineStackbitConfig({
           { name: "ownerName", type: "string" },
           { name: "phoneNumber", type: "string" },
           { name: "email", type: "string" },
+          { name: "profileImage", type: "image" },
           { name: "postcodes", type: "list", items: { 
             type: "object", 
             fields: [
