@@ -4,6 +4,9 @@ import mdx from '@astrojs/mdx';
 
 import sitemap from '@astrojs/sitemap';
 
+import { EventEmitter } from 'events'
+EventEmitter.defaultMaxListeners = 100
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://example.com',
