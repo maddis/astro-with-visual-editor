@@ -27,7 +27,7 @@ postcodes:
     code: PE19
   - areas: 'Gamlingay, Great Gransden, Little Gransden'
     code: SG19
-profileImage: /images/cambourne-11.jpeg
+profileImage: /images/cambourne-1.jpeg
 pubDate: '2025-03-10'
 type: branch
 updatedDate: '2025-04-02'
