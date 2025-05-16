@@ -1,6 +1,6 @@
 ---
-branchName: Cambourn
-email: cambourne@welovepets.ema
+branchName: Cambourne
+email: cambourne@welovepets.email
 local_image_count: 11
 local_image_urls:
   - /src/content/_images/cambourne-1.jpeg
@@ -15,7 +15,7 @@ local_image_urls:
   - /src/content/_images/cambourne-11.jpeg
   - /src/content/_images/cambourne-12.jpeg
 ownerName: Amanda
-phoneNumber: 1010284592
+phoneNumber: 07713639403
 postcodes:
   - areas: 'Cambournee, Elsworth, Papworth Everard, Bourn, Comberton.'
     code: CB23
