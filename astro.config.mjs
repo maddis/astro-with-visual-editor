@@ -18,7 +18,8 @@ export default defineConfig({
 	integrations: [mdx(), sitemap()],
 	vite: {
 		server: {
-		  hmr: { path: '/vite-hmr/' }
+		  hmr: { path: '/vite-hmr/' },
+		  allowedHosts: ['localhost', '127.0.0.1', '0.0.0.0', 'devserver-preview--welovepetscare.netlify.app', 'devserver-preview--welovepetscare.netlify.app:3000', 'devserver-preview--welovepetscare.netlify.app:8888'],
 		}
 	  },
 	server: {
