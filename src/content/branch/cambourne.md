@@ -1,6 +1,6 @@
 ---
 branchName: Cambourne
-email: cambourne@welovepets.email
+email: cambourne@welovepets.emaill
 local_image_count: 11
 local_image_urls:
   - /src/content/_images/cambourne-1.jpeg
