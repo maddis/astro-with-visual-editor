@@ -15,7 +15,7 @@ local_image_urls:
   - /src/content/_images/cambourne-11.jpeg
   - /src/content/_images/cambourne-12.jpeg
 ownerName: Amandaa
-phoneNumber: '07415734060'
+phoneNumber: 07415734060
 postcodes:
   - areas: 'Cambournee, Elsworth, Papworth Everard, Bourn, Comberton.'
     code: CB23
