@@ -17,7 +17,7 @@ local_image_urls:
 ownerName: Amandaaa
 phoneNumber: 07415734058
 postcodes:
-  - areas: 'Cambourne, Elsworth, Papworth Everard, Bourn, Comberton.'
+  - areas: 'Cambournee, Elsworth, Papworth Everard, Bourn, Comberton.'
     code: CB23
   - areas: 'Longstanton, Swavesey, Oakington'
     code: CB24
