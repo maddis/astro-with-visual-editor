@@ -16,6 +16,7 @@ const {
     ownerName, 
     phoneNumber, 
     email, 
+    profileImage,
     pubDate, 
     updatedDate, 
     postcodes
@@ -153,7 +154,17 @@ const {
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="elementor-element elementor-element-12a031fe elementor-widget elementor-widget-image" data-id="12a031fe" data-element_type="widget" data-widget_type="image.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <img decoding="async" width="2560" height="1631" src="../wp-content/uploads/2023/02/1-1-min-1-scaled.jpg" class="attachment-full size-full wp-image-90469" alt="" srcset="../wp-content/uploads/2023/02/1-1-min-1-scaled.jpg 2560w, ../wp-content/uploads/2023/02/1-1-min-1-300x191.jpg 300w, ../wp-content/uploads/2023/02/1-1-min-1-1024x653.jpg 1024w, ../wp-content/uploads/2023/02/1-1-min-1-768x489.jpg 768w, ../wp-content/uploads/2023/02/1-1-min-1-1536x979.jpg 1536w, ../wp-content/uploads/2023/02/1-1-min-1-2048x1305.jpg 2048w, ../wp-content/uploads/2023/02/1-1-min-1-624x398.jpg 624w" sizes="(max-width: 2560px) 100vw, 2560px"/>
+                                                                    <img
+                                                                    decoding="async"
+                                                                    width="2560"
+                                                                    height="1631"
+                                                                    src={profileImage}
+                                                                    class="attachment-full size-full wp-image-90469"
+                                                                    alt=""
+                                                                    srcset={`${profileImage} 2560w, ${profileImage} 300w, ${profileImage} 1024w, ${profileImage} 768w, ${profileImage} 1536w, ${profileImage} 2048w, ${profileImage} 624w`}
+                                                                    sizes="(max-width: 2560px) 100vw, 2560px"
+                                                                    data-sb-field-path="profileImage"
+                                                                    />
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-1c777f2d elementor-widget elementor-widget-text-editor" data-id="1c777f2d" data-element_type="widget" data-widget_type="text-editor.default">

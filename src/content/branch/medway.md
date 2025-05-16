@@ -3,17 +3,17 @@ branchName: Medway
 email: medway@welovepets.email
 local_image_count: 11
 local_image_urls:
-- /src/content/_images/medway-1.jpg
-- /src/content/_images/medway-2.jpg
-- /src/content/_images/medway-3.jpeg
-- /src/content/_images/medway-4.jpg
-- /src/content/_images/medway-5.jpg
-- /src/content/_images/medway-6.jpg
-- /src/content/_images/medway-7.jpg
-- /src/content/_images/medway-8.jpg
-- /src/content/_images/medway-9.jpg
-- /src/content/_images/medway-11.jpg
-- /src/content/_images/medway-12.jpg
+- /images/medway-1.jpg
+- /images/medway-2.jpg
+- /images/medway-3.jpeg
+- /images/medway-4.jpg
+- /images/medway-5.jpg
+- /images/medway-6.jpg
+- /images/medway-7.jpg
+- /images/medway-8.jpg
+- /images/medway-9.jpg
+- /images/medway-11.jpg
+- /images/medway-12.jpg
 ownerName: Cheryl
 phoneNumber: 07702589958
 postcodes:
@@ -29,6 +29,7 @@ postcodes:
   code: ME14
 - areas: Aylesford, Eccles, Ditton, New Hythe
   code: ME20
+profileImage: /images/medway-1.jpg
 pubDate: '2025-05-09'
 type: branch
 updatedDate: '2025-05-09'

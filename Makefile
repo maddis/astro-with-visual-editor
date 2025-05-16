@@ -10,7 +10,7 @@ init:
 	source .venv/bin/activate
 	echo "\tInstalling dependencies..."
 	npm install
-	pip install -r requirements.txt
+	pip install -r scripts/requirements-dev.txt
 
 activate:
 	echo "\tActivating virtual environment..."
