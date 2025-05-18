@@ -467,7 +467,8 @@ def fetch_and_write_markdown():
             "updatedDate": updatedDate,
             "local_image_urls": saved_images,
             "local_image_count": len(saved_images),
-            "postcodes": postcodes
+            "postcodes": postcodes,
+            "summaryContent": summary_content
         }
         print(f"Saved {len(saved_images)} images for {branchName}")
         
