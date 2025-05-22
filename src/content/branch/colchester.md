@@ -1,28 +1,28 @@
 ---
 branchName: Colchester
-email: colchester2@welovepets.email
+email: colchester@welovepets.email
 local_image_count: 11
 local_image_urls:
-  - /images/colchester-1.jpg
-  - /images/colchester-2.jpg
-  - /images/colchester-3.jpeg
-  - /images/colchester-4.jpg
-  - /images/colchester-5.jpg
-  - /images/colchester-6.jpg
-  - /images/colchester-7.jpg
-  - /images/colchester-8.jpg
-  - /images/colchester-9.jpg
-  - /images/colchester-11.jpg
-  - /images/colchester-12.jpg
+- /images/colchester-1.jpg
+- /images/colchester-2.jpg
+- /images/colchester-3.jpeg
+- /images/colchester-4.jpg
+- /images/colchester-5.jpg
+- /images/colchester-6.jpg
+- /images/colchester-7.jpg
+- /images/colchester-8.jpg
+- /images/colchester-9.jpg
+- /images/colchester-11.jpg
+- /images/colchester-12.jpg
 ownerName: Gemma
-phoneNumber: 07702589958
+phoneNumber: '07547206033'
 postcodes:
-  - areas: Colchester
-    code: CO1
-  - areas: 'Boxted, Langham, Highwoods, Myland, Greenstead'
-    code: CO4
-  - areas: '4  Nayland, Little Horkesley, Great Horkesley, Leavenheath, StokebyNayland'
-    code: CO6
+- areas: Colchester
+  code: CO1
+- areas: Boxted, Langham, Highwoods, Myland, Greenstead
+  code: CO4
+- areas: 4  Nayland, Little Horkesley, Great Horkesley, Leavenheath, StokebyNayland
+  code: CO6
 profileImage: /images/colchester-1.jpg
 pubDate: '2025-05-07'
 summaryContent: '#### **We Love Pets Colchester –**
@@ -56,7 +56,7 @@ summaryContent: '#### **We Love Pets Colchester –**
   is receiving the same kindness, attention, and respect we give our own pets.
 
 
-  [Give us a call](tel:X)
+  [Give us a call](tel:07547206033)
 
 
   ![](https://welovepets.care/wp-content/uploads/2023/02/group-shot-min-scaled.jpg)
@@ -65,7 +65,7 @@ summaryContent: '#### **We Love Pets Colchester –**
   ### **Meet Gemma | We Love Pets Colchester**
 
 
-  **[colchester@welovepets.email](mailto:colchester@welovepets.email)**
+  **[07547 206033](tel:07547206033) | [colchester@welovepets.email](mailto:colchester@welovepets.email)**
 
 
   **We Love Pets Colchester** is run by Gemma, who leads a passionate team of pet
@@ -351,7 +351,7 @@ summaryContent: '#### **We Love Pets Colchester –**
   -------
 
 
-  Call Gemma on **[X](tel:07702589958)** or complete the contact form.
+  Call Gemma on **[07547 206033](tel:07547206033)** or complete the contact form.
 
 
   ![We Love Pets franchisees group photo](https://welovepets.care/wp-content/uploads/2024/08/april-2023-group-2-1024x683.jpg)
@@ -531,7 +531,7 @@ summaryContent: '#### **We Love Pets Colchester –**
   *This branch of We Love Pets is owned and operated by Gemma Nachman trading as We
   Love Pets Colchester.*'
 type: branch
-updatedDate: '2025-05-09'
+updatedDate: '2025-05-21'
 ---
 
 

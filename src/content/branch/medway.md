@@ -15,7 +15,7 @@ local_image_urls:
 - /images/medway-11.jpg
 - /images/medway-12.jpg
 ownerName: Cheryl
-phoneNumber: 07702589958
+phoneNumber: '07746703515'
 postcodes:
 - areas: 3  Wouldham, Burham, Borstal
   code: ME1
@@ -60,7 +60,7 @@ summaryContent: '#### **We Love Pets Medway –**
   animals every day.
 
 
-  [Give us a call](tel:X)
+  [Give us a call](tel:07746703515%20)
 
 
   ![](https://welovepets.care/wp-content/uploads/2023/02/group-shot-min-scaled.jpg)
@@ -69,7 +69,7 @@ summaryContent: '#### **We Love Pets Medway –**
   ### **Meet Cheryl | We Love Pets Medway**
 
 
-  **[medway@welovepets.email](mailto:medway@welovepets.email)**
+  **[07746 703515](tel:07746703515) | [medway@welovepets.email](mailto:medway@welovepets.email)**
 
 
   **We Love Pets Medway** is run by Cheryl, who leads a dedicated team of local pet
@@ -356,7 +356,7 @@ summaryContent: '#### **We Love Pets Medway –**
   -------
 
 
-  Call Cheryl on **[X](tel:07702589958)** or complete the contact form.
+  Call Cheryl on **[07746 703515](tel:07746703515)**  or complete the contact form.
 
 
   ![We Love Pets franchisees group photo](https://welovepets.care/wp-content/uploads/2024/08/april-2023-group-2-1024x683.jpg)
@@ -545,7 +545,7 @@ summaryContent: '#### **We Love Pets Medway –**
   *This branch of We Love Pets is owned and operated by Cheryl Pettitt trading as
   We Love Pets Medway.*'
 type: branch
-updatedDate: '2025-05-09'
+updatedDate: '2025-05-21'
 ---
 
 

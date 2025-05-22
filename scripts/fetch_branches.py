@@ -11,7 +11,7 @@ import pathlib
 import sys
 
 # Get number of branches from first arg and default to 5
-num_branches = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+num_branches = int(sys.argv[1]) if len(sys.argv) > 1 else 50
 
 SCRIPT_DIR = pathlib.Path(__file__).parent.absolute()
 PROJECT_DIR = SCRIPT_DIR.parent

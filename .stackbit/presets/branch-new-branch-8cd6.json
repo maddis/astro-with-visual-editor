@@ -1,0 +1,54 @@
+{
+    "model": "branch",
+    "srcType": "git",
+    "srcProjectId": "559a96d4",
+    "presets": [
+        {
+            "label": "New Branch",
+            "locale": null,
+            "metadata": {
+                "categories": [
+                    "Branch"
+                ],
+                "canDelete": true
+            },
+            "data": {
+                "_filePath_slug": "cambourne",
+                "branchName": "Cambourne",
+                "pubDate": "2025-03-10",
+                "updatedDate": "2025-04-02",
+                "ownerName": "Amanda",
+                "phoneNumber": "07415734058",
+                "email": "cambourne@welovepets.email",
+                "profileImage": {
+                    "$$ref": "stackbit_asset_id:static:public/images/cambourne-1.jpeg",
+                    "$$type": "__asset_model"
+                },
+                "postcodes": [
+                    {
+                        "areas": "Cambourne, Elsworth, Papworth Everard, Bourn, Comberton.",
+                        "code": "CB23"
+                    },
+                    {
+                        "areas": "Longstanton, Swavesey, Oakington",
+                        "code": "CB24"
+                    },
+                    {
+                        "areas": "Girton, Eddington",
+                        "code": "CB3"
+                    },
+                    {
+                        "areas": "St Neots, Eynesbury, Eaton Socon, Abbotsley, Eltisley",
+                        "code": "PE19"
+                    },
+                    {
+                        "areas": "Gamlingay, Great Gransden, Little Gransden",
+                        "code": "SG19"
+                    }
+                ],
+                "markdown_content": "\n\n\n"
+            },
+            "thumbnail": "images/branch-new-branch-8cd6.png"
+        }
+    ]
+}
