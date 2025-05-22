@@ -1,11 +1,11 @@
 ---
 type: branch
-branchName: Test Branch 2
+branchName: Stoke
 pubDate: '2025-03-10'
 updatedDate: '2025-04-02'
 ownerName: Amanda
-phoneNumber: 07415734059
-email: cambourne@welovepets.email
+phoneNumber: 07713639403
+email: stoke@welovepets.email
 profileImage: /images/cambourne-1.jpeg
 postcodes:
   - areas: 'Cambourne, Elsworth, Papworth Everard, Bourn, Comberton.'
