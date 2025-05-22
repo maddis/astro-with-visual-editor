@@ -15,7 +15,7 @@ local_image_urls:
 - /images/loddon-chedgrave-11.jpg
 - /images/loddon-chedgrave-12.jpg
 ownerName: Anna
-phoneNumber: '07756667303'
+phoneNumber: 07756667303
 postcodes:
 - areas: 6  Loddon, Chedgrave, Thurlton, Haddiscoe, Raveningham
   code: NR14

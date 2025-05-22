@@ -15,7 +15,7 @@ local_image_urls:
 - /images/hornsey-11.jpg
 - /images/hornsey-12.jpg
 ownerName: Aoife and
-phoneNumber: '07526560640'
+phoneNumber: 07526560640
 postcodes:
 - areas: Hornsey, Highgate
   code: N6

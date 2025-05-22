@@ -14,7 +14,7 @@ local_image_urls:
 - /images/herne-bay-9.jpg
 - /images/herne-bay-11.jpg
 ownerName: Holly and
-phoneNumber: '01227656136'
+phoneNumber: 01227656136
 postcodes:
 - areas: Hillborough, Hawthorn, Herne Bay, Herne Common, West End, Reculver
   code: CT6
