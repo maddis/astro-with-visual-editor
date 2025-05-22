@@ -5,7 +5,7 @@ pubDate: '2025-03-10'
 updatedDate: '2025-04-02'
 ownerName: Amanda
 phoneNumber: 07713639403
-email: cambourne@welovepets.email
+email: stoke@welovepets.email
 profileImage: /images/cambourne-1.jpeg
 postcodes:
   - areas: 'Cambourne, Elsworth, Papworth Everard, Bourn, Comberton.'
