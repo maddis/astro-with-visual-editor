@@ -22,10 +22,15 @@ fetch:
 	echo "\tFetching blogs..."
 	python3 scripts/fetch_blogs.py 5
 
-# Check for uncommitted changes, build, and push to git
+# Check for uncommitted changes, pull latest changes, build, and push to git
 push:
 	@if [ -n "$$(git status --porcelain)" ]; then \
 		echo "Error: You have uncommitted changes. Please commit or stash them first."; \
+		exit 1; \
+	fi
+	@echo "\tPulling latest changes..."
+	@if ! git pull; then \
+		echo "Failed to pull changes. Please resolve any merge conflicts and try again."; \
 		exit 1; \
 	fi
 	@echo "\tRunning build..."
