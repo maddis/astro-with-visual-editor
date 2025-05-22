@@ -15,7 +15,7 @@ local_image_urls:
 - /images/colchester-11.jpg
 - /images/colchester-12.jpg
 ownerName: Gemma
-phoneNumber: '07547206033'
+phoneNumber: 07547206033
 postcodes:
 - areas: Colchester
   code: CO1
