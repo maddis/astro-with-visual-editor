@@ -15,7 +15,7 @@ local_image_urls:
 - /images/medway-11.jpg
 - /images/medway-12.jpg
 ownerName: Cheryl
-phoneNumber: 07746703515
+phoneNumber: '07746703515'
 postcodes:
 - areas: 3  Wouldham, Burham, Borstal
   code: ME1

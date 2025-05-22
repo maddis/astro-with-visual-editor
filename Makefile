@@ -18,6 +18,8 @@ activate:
 
 fetch:
 	echo "\tFetching branches..."
-	python3 scripts/fetch_branches.py 30
+	python3 scripts/fetch_branches.py 5
+	echo "\tFetching blogs..."
+	python3 scripts/fetch_blogs.py 5
 	
 
