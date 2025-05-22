@@ -60,9 +60,9 @@ export default defineStackbitConfig({
       }],
       assetsConfig: {
         referenceType: "static",
-        staticDir: "src/content",
-        uploadDir: "_images",
-        publicPath: "/src/content/",
+        staticDir: "public/images",
+        uploadDir: "public/images",     // <- where the file is saved
+        publicPath: "/images",  
       },
     }),
   ],

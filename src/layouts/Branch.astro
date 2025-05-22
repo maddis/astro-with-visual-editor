@@ -16,6 +16,7 @@ const {
     ownerName, 
     phoneNumber, 
     email, 
+    profileImage,
     pubDate, 
     updatedDate, 
     postcodes
@@ -45,7 +46,7 @@ const {
             <div id="content" class="site-content">
 
 
-                <div class="container">
+                <div class="container" data-sb-object-id={filePath}>
                     <div class="bb-grid site-content-grid">
                         <div data-elementor-type="wp-page" data-elementor-id="7197" class="elementor elementor-7197" data-elementor-post-type="page">
                             <section class="elementor-section elementor-top-section elementor-element elementor-element-38b7a37c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="38b7a37c" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/1Icnfwkp0-o&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
@@ -62,7 +63,7 @@ const {
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="elementor-element elementor-element-404313c7 elementor-widget elementor-widget-heading" data-id="404313c7" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <h1 class="elementor-heading-title elementor-size-default">Award-winning dog walking, pet sitting and home boarding in {branchName}</h1>
+                                                                    <h1 class="elementor-heading-title elementor-size-default">Award-winning dog walking, pet sitting and home boarding in <span data-sb-field-path="branchName">{branchName}</span></h1>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -111,7 +112,7 @@ const {
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
                                                                         <h4>
-                                                                            <strong>We Love Pets {branchName} &#8211;
+                                                                            <strong>We Love Pets <span data-sb-field-path="branchName">{branchName}</span> &#8211;
                                                                             </strong>
                                                                         </h4>
                                                                     </div>
@@ -126,9 +127,9 @@ const {
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
                                                                         <p style="font-weight: 400;">Our
-                                                                            <strong>We Love Pets {branchName}</strong>
-                                                                            is a lovely branch of pet care experts offering amazing pet care services in {branchName}, Crowsley, Warren Row and many more of the surrounding areas. The whole team are huge animal lovers and enthusiastic about providing pet care for the animals in their community, so you can trust that your pet is in safe hands with us.</p>
-                                                                        <p style="font-weight: 400;">We offer wonderful services for dog walking and pet sitting for a whole host of animals, big and small: dogs, small animals, horses, exotic pets, and birds! We’re certain that you will find exactly the service that you need through our {branchName} branch.</p>
+                                                                            <strong>We Love Pets <span data-sb-field-path="branchName">{branchName}</span></strong>
+                                                                            is a lovely branch of pet care experts offering amazing pet care services in <span data-sb-field-path="branchName">{branchName}</span>, Crowsley, Warren Row and many more of the surrounding areas. The whole team are huge animal lovers and enthusiastic about providing pet care for the animals in their community, so you can trust that your pet is in safe hands with us.</p>
+                                                                        <p style="font-weight: 400;">We offer wonderful services for dog walking and pet sitting for a whole host of animals, big and small: dogs, small animals, horses, exotic pets, and birds! We’re certain that you will find exactly the service that you need through our <span data-sb-field-path="branchName">{branchName}</span> branch.</p>
                                                                         <p style="font-weight: 400;">We will make sure to talk to you about our services ahead of time, to make sure you can find the best one to suit your needs. We want to learn all we can about your pets, and all the things that make them unique, so we can create a personalised pet care plan just for them.</p>
                                                                     </div>
                                                                 </div>
@@ -153,26 +154,36 @@ const {
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="elementor-element elementor-element-12a031fe elementor-widget elementor-widget-image" data-id="12a031fe" data-element_type="widget" data-widget_type="image.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <img decoding="async" width="2560" height="1631" src="../wp-content/uploads/2023/02/1-1-min-1-scaled.jpg" class="attachment-full size-full wp-image-90469" alt="" srcset="../wp-content/uploads/2023/02/1-1-min-1-scaled.jpg 2560w, ../wp-content/uploads/2023/02/1-1-min-1-300x191.jpg 300w, ../wp-content/uploads/2023/02/1-1-min-1-1024x653.jpg 1024w, ../wp-content/uploads/2023/02/1-1-min-1-768x489.jpg 768w, ../wp-content/uploads/2023/02/1-1-min-1-1536x979.jpg 1536w, ../wp-content/uploads/2023/02/1-1-min-1-2048x1305.jpg 2048w, ../wp-content/uploads/2023/02/1-1-min-1-624x398.jpg 624w" sizes="(max-width: 2560px) 100vw, 2560px"/>
+                                                                    <img
+                                                                    decoding="async"
+                                                                    width="2560"
+                                                                    height="1631"
+                                                                    src={profileImage}
+                                                                    class="attachment-full size-full wp-image-90469"
+                                                                    alt=""
+                                                                    srcset={`${profileImage} 2560w, ${profileImage} 300w, ${profileImage} 1024w, ${profileImage} 768w, ${profileImage} 1536w, ${profileImage} 2048w, ${profileImage} 624w`}
+                                                                    sizes="(max-width: 2560px) 100vw, 2560px"
+                                                                    data-sb-field-path="profileImage"
+                                                                    />
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-1c777f2d elementor-widget elementor-widget-text-editor" data-id="1c777f2d" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
                                                                         <h3>
-                                                                            <strong>Meet {ownerName} | We Love Pets {branchName}</strong>
+                                                                            <strong>Meet <span data-sb-field-path="ownerName">{ownerName}</span> | We Love Pets <span data-sb-field-path="branchName">{branchName}</span></strong>
                                                                         </h3>
                                                                         <p>
                                                                             <span style="color: #cb333b;">
                                                                                 <strong>
-                                                                                    <a href="tel:{phoneNumber}">{phoneNumber}</a>
+                                                                                    <a href="tel:{phoneNumber}" data-sb-field-path="phoneNumber">{phoneNumber}</a>
                                                                                     |
-                                                                                    <a href="mailto:{email}">{email}</a>
+                                                                                    <a href="mailto:{email}" data-sb-field-path="email">{email}</a>
                                                                                 </strong>
                                                                             </span>
                                                                         </p>
-                                                                        <p style="font-weight: 400;">Our lovely branch manager for We Love Pets {branchName} is {ownerName}! {ownerName} has had a lifetime of pet ownership, so she knows exactly how to care for a whole host of animals, and her general enthusiasm and years of experience running her branch means she knows exactly how to look after the animals in her community.</p>
-                                                                        <p style="font-weight: 400;">{ownerName} is City and Guilds qualified in dog walking and local to the area so knows all the local walks that are the most fun and safe. Everyone is also DBS checked, pet first aid trained and fully insured for the job, so you can be sure that your pet is in very safe hands.</p>
+                                                                        <p style="font-weight: 400;">Our lovely branch manager for We Love Pets <span data-sb-field-path="branchName">{branchName}</span> is <span data-sb-field-path="ownerName">{ownerName}</span>! <span data-sb-field-path="ownerName">{ownerName}</span> has had a lifetime of pet ownership, so she knows exactly how to care for a whole host of animals, and her general enthusiasm and years of experience running her branch means she knows exactly how to look after the animals in her community.</p>
+                                                                        <p style="font-weight: 400;"><span data-sb-field-path="ownerName">{ownerName}</span> is City and Guilds qualified in dog walking and local to the area so knows all the local walks that are the most fun and safe. Everyone is also DBS checked, pet first aid trained and fully insured for the job, so you can be sure that your pet is in very safe hands.</p>
                                                                         <p style="font-weight: 400;">We understand how important it is that your pets are happy and comfortable with us, so we make sure that all our time is split to include physical and mental stimulation that will benefit their body health and their brain wellbeing.</p>
                                                                     </div>
                                                                 </div>
@@ -486,9 +497,9 @@ const {
                                                             <div class="elementor-element elementor-element-434e5863 elementor-widget elementor-widget-text-editor" data-id="434e5863" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
-                                                                        <p>Call {ownerName} on
+                                                                        <p>Call <span data-sb-field-path="ownerName">{ownerName}</span> on
                                                                             <a href="tel:{phoneNumber}">
-                                                                                <strong>{phoneNumber}</strong>
+                                                                                <strong data-sb-field-path="phoneNumber">{phoneNumber}</strong>
                                                                             </a>
                                                                             or complete the contact form.</p>
                                                                     </div>
@@ -535,14 +546,14 @@ const {
                                                             <div class="elementor-element elementor-element-2f02afb0 elementor-widget elementor-widget-heading" data-id="2f02afb0" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
                                                                     <h2 class="elementor-heading-title elementor-size-default">
-                                                                        <h2 class="elementor-heading-title elementor-size-default" style="font-size: 38px;line-height: 44px;font-family: var( --e-global-typography-primary-font-family ), Sans-serif;font-weight: bold;letter-spacing: -0.7px">Areas covered by our {branchName} branch:</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default" style="font-size: 38px;line-height: 44px;font-family: var( --e-global-typography-primary-font-family ), Sans-serif;font-weight: bold;letter-spacing: -0.7px">Areas covered by our <span data-sb-field-path="branchName">{branchName}</span> branch:</h2>
                                                                     </h2>
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-31fc4597 elementor-widget elementor-widget-text-editor" data-id="31fc4597" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color bb-elementor-custom-size bb-elementor-custom-line-height">
-                                                                        <p>Our {branchName} branch also covers surrounding areas. See the locations we cover listed below.</p>
+                                                                        <p>Our <span data-sb-field-path="branchName">{branchName}</span> branch also covers surrounding areas. See the locations we cover listed below.</p>
                                                                         {postcodes.map((postcode) => (
                                                                             <p>
                                                                                 <strong>{postcode.code}</strong>– {postcode.areas}
@@ -930,7 +941,7 @@ const {
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="elementor-element elementor-element-13d2aa44 elementor-widget elementor-widget-heading" data-id="13d2aa44" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <h3 class="elementor-heading-title elementor-size-default">Why we love {branchName}</h3>
+                                                                    <h3 class="elementor-heading-title elementor-size-default">Why we love <span data-sb-field-path="branchName">{branchName}</span></h3>
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-36ca8be8 elementor-widget elementor-widget-image" data-id="36ca8be8" data-element_type="widget" data-widget_type="image.default">
@@ -941,7 +952,7 @@ const {
                                                             <div class="elementor-element elementor-element-4877d0d elementor-widget elementor-widget-text-editor" data-id="4877d0d" data-element_type="widget" data-widget_type="text-editor.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color">
-                                                                        <p>This branch of We Love Pets is owned and operated by Sam Baxter trading as We Love Pets {branchName}.</p>
+                                                                        <p>This branch of We Love Pets is owned and operated by Sam Baxter trading as We Love Pets <span data-sb-field-path="branchName">{branchName}</span>.</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -953,7 +964,7 @@ const {
                                                                 <div class="elementor-widget-container">
                                                                     <div class="bb-theme-elementor-wrap bb-elementor-custom-color">
                                                                         <h3>
-                                                                            <strong>Our favourite places to take dogs in&nbsp;{branchName}</strong>
+                                                                            <strong>Our favourite places to take dogs in&nbsp;<span data-sb-field-path="branchName">{branchName}</span></strong>
                                                                         </h3>
                                                                         <p>National Trust Greys Court is a lovely place for a walk with the dog. It offers lots of paths around all the pretty gardens and has a nearby grassy field for running and playing on. The whol<font face="var( --e-global-typography-text-font-family ), Sans-serif">e area is great fun for the dog&nbsp;</font>and also<font face="var( --e-global-typography-text-font-family ), Sans-serif">&nbsp;lovely and scenic for the humans too!</font>
                                                                         </p>

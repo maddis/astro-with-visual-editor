@@ -11,11 +11,12 @@ import pathlib
 import sys
 
 # Get number of branches from first arg and default to 5
-num_branches = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+num_branches = int(sys.argv[1]) if len(sys.argv) > 1 else 50
 
 SCRIPT_DIR = pathlib.Path(__file__).parent.absolute()
 PROJECT_DIR = SCRIPT_DIR.parent
 OUTPUT_DIR = str(PROJECT_DIR / "src" / "content" / "branch")
+PUBLIC_IMAGE_DIR = str(PROJECT_DIR / "public" / "images")
 URL = "https://welovepets.care/wp-json/wp/v2/pages?categories=80&per_page={}&page=1".format(num_branches)
 
 def extract_text_editors(html):
@@ -40,7 +41,7 @@ def save_image(url, slug, index):
             ext = '.jpg'  # Default to jpg if no extension
         
         # Create images directory if it doesn't exist
-        images_dir = os.path.join(PROJECT_DIR, 'src', 'content', '_images')
+        images_dir = PUBLIC_IMAGE_DIR
         os.makedirs(images_dir, exist_ok=True)
         
         # Create filename with branch slug prefix
@@ -62,7 +63,7 @@ def save_image(url, slug, index):
                 print(f"Source image not found: {src_path}")
                 return None
             
-        return f"/src/content/_images/{filename}"
+        return f"/images/{filename}"
     except Exception as e:
         print(f"Error saving image {url}: {e}")
         return None
@@ -361,6 +362,10 @@ def fetch_and_write_markdown():
     if os.path.exists(OUTPUT_DIR):
         shutil.rmtree(OUTPUT_DIR)
 
+    # Delete the images directory and all folders within it
+    if os.path.exists(PUBLIC_IMAGE_DIR):
+        shutil.rmtree(PUBLIC_IMAGE_DIR)
+
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     print(f"Fetching branch data from {URL}...")
     response = requests.get(URL)
@@ -448,8 +453,12 @@ def fetch_and_write_markdown():
         print(f"Found {len(local_image_urls)} images for {branchName}")
 
         # Create a single branch file with all data
+        # Set profile image as first image if not already set
+        profileImage = saved_images[0]
+        
         main_frontmatter = {
             "branchName": branchName,
+            "profileImage": profileImage,
             "email": extract_email(all_markdown),
             "ownerName": extract_owner_name(all_markdown),
             "phoneNumber": extract_phone_number(all_markdown),
@@ -458,7 +467,8 @@ def fetch_and_write_markdown():
             "updatedDate": updatedDate,
             "local_image_urls": saved_images,
             "local_image_count": len(saved_images),
-            "postcodes": postcodes
+            "postcodes": postcodes,
+            "summaryContent": summary_content
         }
         print(f"Saved {len(saved_images)} images for {branchName}")
         
